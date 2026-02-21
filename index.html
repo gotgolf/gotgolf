@@ -8,9 +8,7 @@
  <meta property="og:title" content="Got Golf — Anti-Slice Rub" />
  <meta property="og:description" content="Hit straighter, longer shots with Anti-Slice Rub." />
  <meta property="og:type" content="website" />
- <div class="product-image-frame">
- <img class="product-image" src="assets/product.png" alt="Got Golf Anti-Slice Rub">
-</div>
+ <meta property="og:image" content="assets/product.png" />
  <link rel="icon" href="assets/logo.png" />
  <link rel="stylesheet" href="styles.css" />
 </head>
@@ -29,7 +27,9 @@
  <header class="header">
    <div class="container header__inner">
      <a class="brand" href="#">
-       <img src="assets/logo.png" alt="Got Golf logo" class="brand__logo" />
+       <div class="product-image-frame">
+ <img class="product-image" src="assets/product.png" alt="Got Golf Anti-Slice Rub">
+</div>
        <span class="brand__name">Got Golf</span>
      </a>
 
@@ -66,9 +66,8 @@
      <!-- Gallery -->
      <div class="gallery">
        <div class="gallery__main">
-         <div class="product-image-frame">
- <img class="product-image" src="assets/product.jpg" alt="Got Golf Anti-Slice Rub">
-</div>
+         <img id="mainImage" src="assets/product.png" alt="Anti-Slice Rub product image" />
+       </div>
 
        <div class="thumbs" role="list" aria-label="Product thumbnails">
          <button class="thumb isActive" data-src="assets/product.png" aria-label="View image 1">
