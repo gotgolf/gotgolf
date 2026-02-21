@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <title>Got Golf — Anti-Slice Rub</title>
+ <meta name="description" content="Hit straighter, longer shots with Got Golf Anti-Slice Rub. Clean, easy application. Secure checkout." />
+ <meta property="og:title" content="Got Golf — Anti-Slice Rub" />
+ <meta property="og:description" content="Hit straighter, longer shots with Anti-Slice Rub." />
+ <meta property="og:type" content="website" />
+ <meta property="og:image" content="assets/product-1.jpg" />
+ <link rel="icon" href="assets/logo.png" />
+ <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+ <!-- Top bar -->
+ <div class="topbar" role="status">
+   <span>Free shipping over $40</span>
+   <span class="dot">•</span>
+   <span>Secure checkout</span>
+   <span class="dot">•</span>
+   <span>Made for straighter ball flight</span>
+ </div>
+
+ <!-- Header -->
+ <header class="header">
+   <div class="container header__inner">
+     <a class="brand" href="#">
+       <img src="assets/logo.png" alt="Got Golf logo" class="brand__logo" />
+       <span class="brand__name">Got Golf</span>
+     </a>
+
+     <nav class="nav">
+       <a href="#details">Details</a>
+       <a href="#videos">Demos</a>
+       <a href="#reviews">Reviews</a>
+       <a href="#faq">FAQ</a>
+     </nav>
+
+     <div class="header__actions">
+       <button class="btn btn--ghost" id="openMiniCart" type="button" aria-label="Open cart">
+         Cart <span class="pillCount" id="cartCount">0</span>
+       </button>
+     </div>
+
+     <button class="burger" id="burger" type="button" aria-label="Open menu">
+       <span></span><span></span><span></span>
+     </button>
+   </div>
+
+   <div class="mobileNav" id="mobileNav" hidden>
+     <a href="#details">Details</a>
+     <a href="#videos">Demos</a>
+     <a href="#reviews">Reviews</a>
+     <a href="#faq">FAQ</a>
+     <button class="btn btn--primary btn--full" id="buyStickyMobile" type="button">Buy Anti-Slice Rub</button>
+   </div>
+ </header>
+
+ <!-- Main product section -->
+ <main class="container productPage">
+   <section class="productGrid">
+     <!-- Gallery -->
+     <div class="gallery">
+       <div class="gallery__main">
+         <img id="mainImage" src="assets/product-1.jpg" alt="Anti-Slice Rub product image" />
+       </div>
+
+       <div class="thumbs" role="list" aria-label="Product thumbnails">
+         <button class="thumb isActive" data-src="assets/product-1.jpg" aria-label="View image 1">
+           <img src="assets/product-1.jpg" alt="" />
+         </button>
+         <button class="thumb" data-src="assets/product-2.jpg" aria-label="View image 2">
+           <img src="assets/product-2.jpg" alt="" />
+         </button>
+         <button class="thumb" data-src="assets/product-3.jpg" aria-label="View image 3">
+           <img src="assets/product-3.jpg" alt="" />
+         </button>
+         <button class="thumb" data-src="assets/product-4.jpg" aria-label="View image 4">
+           <img src="assets/product-4.jpg" alt="" />
+         </button>
+       </div>
+
+       <div class="galleryBadges">
+         <div class="badge">Clean application</div>
+         <div class="badge">Built for golfers</div>
+         <div class="badge">Fast shipping</div>
+       </div>
+     </div>
+
+     <!-- Buy box (sticky) -->
+     <aside class="buyBox" aria-label="Purchase Anti-Slice Rub">
+       <div class="kicker">Anti-Slice Rub</div>
+       <h1 class="title">Hit straighter, longer shots.</h1>
+
+       <div class="ratingRow">
+         <div class="stars" aria-label="4.8 out of 5 stars">
+           ★★★★★
+         </div>
+         <a href="#reviews" class="ratingLink"><span id="reviewCount">128</span> reviews</a>
+       </div>
+
+       <div class="priceRow">
+         <div class="price">
+           <span class="price__now" id="priceNow">$24.99</span>
+           <span class="price__compare" id="priceCompare">$29.99</span>
+         </div>
+         <span class="save" id="saveBadge">Save 17%</span>
+       </div>
+
+       <p class="subcopy">
+         Designed to help reduce slice and promote a more consistent, playable ball flight.
+       </p>
+
+       <div class="buyControls">
+         <label class="field">
+           <span>Quantity</span>
+           <div class="qty">
+             <button class="qty__btn" id="qtyDown" type="button" aria-label="Decrease quantity">−</button>
+             <input id="qty" type="number" min="1" value="1" inputmode="numeric" />
+             <button class="qty__btn" id="qtyUp" type="button" aria-label="Increase quantity">+</button>
+           </div>
+         </label>
+
+         <div class="ctaStack">
+           <button class="btn btn--primary btn--full" id="addToCart" type="button">
+             Add to cart
+           </button>
+           <a class="btn btn--ghost btn--full" id="buyNow" href="#" target="_blank" rel="noopener">
+             Buy it now
+           </a>
+           <div class="fine">
+             <span>Secure checkout</span>
+             <span class="dot">•</span>
+             <span>Apple Pay / Google Pay (via Stripe)</span>
+           </div>
+         </div>
+       </div>
+
+       <div class="trustGrid">
+         <div class="trustItem">
+           <div class="trustTitle">Fast</div>
+           <div class="trustText">Easy to apply</div>
+         </div>
+         <div class="trustItem">
+           <div class="trustTitle">Clean</div>
+           <div class="trustText">No messy routine</div>
+         </div>
+         <div class="trustItem">
+           <div class="trustTitle">Confident</div>
+           <div class="trustText">Built for consistency</div>
+         </div>
+       </div>
+
+       <div class="accordion" id="details">
+         <details open>
+           <summary>Description</summary>
+           <div class="accBody">
+             <p>
+               Got Golf Anti-Slice Rub is designed to help golfers reduce slice and improve consistency.
+               Use it as part of your pre-round routine and swing with confidence.
+             </p>
+             <ul>
+               <li>Designed for straighter ball flight</li>
+               <li>Quick, clean application</li>
+               <li>Made for golfers of all levels</li>
+             </ul>
+           </div>
+         </details>
+
+         <details>
+           <summary>How to use</summary>
+           <div class="accBody">
+             <ol>
+               <li>Apply Anti-Slice Rub as directed before your session.</li>
+               <li>Take your normal swings — focus on solid contact.</li>
+               <li>Track your ball flight and consistency over time.</li>
+             </ol>
+             <p class="fine">Tip: Watch the demo videos for examples.</p>
+           </div>
+         </details>
+
+         <details>
+           <summary>Shipping</summary>
+           <div class="accBody">
+             <p>Orders typically ship in 1–2 business days. Delivery times vary by location.</p>
+             <p class="fine">Update this with your exact shipping policy once finalized.</p>
+           </div>
+         </details>
+
+         <details>
+           <summary>Returns</summary>
+           <div class="accBody">
+             <p>Add your return policy here (or link to a policy page).</p>
+           </div>
+         </details>
+       </div>
+     </aside>
+   </section>
+
+   <!-- Video demos -->
+   <section class="section section--alt" id="videos">
+     <div class="sectionHead">
+       <div>
+         <h2>Watch it work</h2>
+         <p class="subhead">Real demos using your clips.</p>
+       </div>
+       <button class="btn btn--ghost" id="muteAll" type="button">Mute all</button>
+     </div>
+
+     <div class="videoGrid">
+       <figure class="videoCard">
+         <video src="assets/videos/demo-1.mp4" controls playsinline preload="metadata"></video>
+         <figcaption>Demo 1</figcaption>
+       </figure>
+       <figure class="videoCard">
+         <video src="assets/videos/demo-2.mp4" controls playsinline preload="metadata"></video>
+         <figcaption>Demo 2</figcaption>
+       </figure>
+       <figure class="videoCard">
+         <video src="assets/videos/demo-3.mp4" controls playsinline preload="metadata"></video>
+         <figcaption>Demo 3</figcaption>
+       </figure>
+       <figure class="videoCard">
+         <video src="assets/videos/demo-4.mp4" controls playsinline preload="metadata"></video>
+         <figcaption>Demo 4</figcaption>
+       </figure>
+       <figure class="videoCard">
+         <video src="assets/videos/demo-5.mp4" controls playsinline preload="metadata"></video>
+         <figcaption>Demo 5</figcaption>
+       </figure>
+     </div>
+   </section>
+
+   <!-- Reviews -->
+   <section class="section" id="reviews">
+     <div class="sectionHead">
+       <div>
+         <h2>Reviews</h2>
+         <p class="subhead">Social proof section (replace with real testimonials when ready).</p>
+       </div>
+     </div>
+
+     <div class="reviewSummary">
+       <div class="reviewScore">
+         <div class="score">4.8</div>
+         <div class="starsBig">★★★★★</div>
+         <div class="fine">Based on <span id="reviewCount2">128</span> reviews</div>
+       </div>
+
+       <div class="reviewBars">
+         <div class="barRow"><span>5★</span><div class="bar"><i style="width:78%"></i></div><span>78%</span></div>
+         <div class="barRow"><span>4★</span><div class="bar"><i style="width:16%"></i></div><span>16%</span></div>
+         <div class="barRow"><span>3★</span><div class="bar"><i style="width:4%"></i></div><span>4%</span></div>
+         <div class="barRow"><span>2★</span><div class="bar"><i style="width:1%"></i></div><span>1%</span></div>
+         <div class="barRow"><span>1★</span><div class="bar"><i style="width:1%"></i></div><span>1%</span></div>
+       </div>
+     </div>
+
+     <div class="reviewsGrid">
+       <article class="reviewCard">
+         <div class="reviewTop">
+           <div class="stars">★★★★★</div>
+           <div class="fine">Verified buyer</div>
+         </div>
+         <h3>Noticeably tighter ball flight</h3>
+         <p>After a few sessions my miss got way more playable. Easy to use and feels like a legit routine addition.</p>
+         <div class="fine">— Jordan</div>
+       </article>
+
+       <article class="reviewCard">
+         <div class="reviewTop">
+           <div class="stars">★★★★★</div>
+           <div class="fine">Verified buyer</div>
+         </div>
+         <h3>Confidence on the tee</h3>
+         <p>I’m not thinking about slicing it into the trees. That alone is worth it.</p>
+         <div class="fine">— Sam</div>
+       </article>
+
+       <article class="reviewCard">
+         <div class="reviewTop">
+           <div class="stars">★★★★☆</div>
+           <div class="fine">Verified buyer</div>
+         </div>
+         <h3>Solid product</h3>
+         <p>Easy, clean application. I’m seeing more consistent starts and less curve.</p>
+         <div class="fine">— Alex</div>
+       </article>
+     </div>
+   </section>
+
+   <!-- FAQ -->
+   <section class="section section--alt" id="faq">
+     <div class="sectionHead">
+       <div>
+         <h2>FAQ</h2>
+         <p class="subhead">Quick answers for buyers.</p>
+       </div>
+     </div>
+
+     <div class="faq">
+       <details>
+         <summary>What is Anti-Slice Rub?</summary>
+         <p>It’s a Got Golf product designed to help golfers reduce slice and improve consistency for straighter, longer shots.</p>
+       </details>
+       <details>
+         <summary>How do I buy it?</summary>
+         <p>Use “Buy it now” for instant checkout (Stripe). Or “Add to cart” to purchase with quantity.</p>
+       </details>
+       <details>
+         <summary>Do you ship nationwide?</summary>
+         <p>Yes — add your exact shipping coverage + timelines here.</p>
+       </details>
+       <details>
+         <summary>What’s your return policy?</summary>
+         <p>Add your return policy details here.</p>
+       </details>
+     </div>
+   </section>
+ </main>
+
+ <!-- Sticky mobile bar -->
+ <div class="stickyBar" id="stickyBar">
+   <div class="stickyBar__inner container">
+     <div class="stickyMini">
+       <img src="assets/product-1.jpg" alt="" />
+       <div>
+         <div class="stickyName">Anti-Slice Rub</div>
+         <div class="stickyPrice">$24.99</div>
+       </div>
+     </div>
+     <button class="btn btn--primary" id="stickyBuy" type="button">Buy</button>
+   </div>
+ </div>
+
+ <!-- Mini cart drawer -->
+ <aside class="drawer" id="drawer" aria-hidden="true">
+   <div class="drawer__overlay" id="drawerOverlay"></div>
+   <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Cart">
+     <div class="drawer__head">
+       <div>
+         <div class="drawer__title">Cart</div>
+         <div class="drawer__sub">Anti-Slice Rub</div>
+       </div>
+       <button class="iconBtn" id="closeDrawer" type="button" aria-label="Close cart">✕</button>
+     </div>
+
+     <div class="drawer__body">
+       <div class="cartLine">
+         <img src="assets/product-1.jpg" alt="" />
+         <div class="cartLine__info">
+           <div class="cartLine__name">Anti-Slice Rub</div>
+           <div class="fine">Quantity: <span id="cartQty">1</span></div>
+         </div>
+         <div class="cartLine__price" id="cartTotal">$24.99</div>
+       </div>
+
+       <a class="btn btn--primary btn--full" id="checkoutLink" href="#" target="_blank" rel="noopener">
+         Checkout
+       </a>
+
+       <p class="fine">
+         Secure checkout via Stripe. Replace the link in <code>script.js</code>.
+       </p>
+     </div>
+   </div>
+ </aside>
+
+ <footer class="footer">
+   <div class="container footer__inner">
+     <div class="footerBrand">
+       <img src="assets/logo.png" alt="Got Golf logo" />
+       <div>
+         <div class="footerName">Got Golf</div>
+         <div class="fine">© <span id="year"></span> Got Golf</div>
+       </div>
+     </div>
+     <div class="footerLinks">
+       <a href="#details">Details</a>
+       <a href="#videos">Demos</a>
+       <a href="#reviews">Reviews</a>
+       <a href="#faq">FAQ</a>
+     </div>
+   </div>
+ </footer>
+
+ <script src="script.js"></script>
+</body>
+</html>
