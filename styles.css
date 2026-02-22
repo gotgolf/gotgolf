@@ -846,3 +846,31 @@ details summary{
 .gallery{
  background: transparent !important;
 }
+
+/* ===== FORCE REMOVE ALL DARK GALLERY BACKGROUNDS ===== */
+
+.gallery,
+.gallery__track,
+.gallery__viewport,
+.gallery__main{
+ background: transparent !important;
+ box-shadow: none !important;
+ border: none !important;
+}
+
+/* Remove any dark pseudo backgrounds */
+.gallery::before,
+.gallery::after,
+.gallery__track::before,
+.gallery__track::after{
+ display: none !important;
+}
+
+/* Enlarge image */
+.gallery__main img{
+ width: 100%;
+ max-width: 600px;
+ height: auto;
+ display: block;
+ margin: 0 auto;
+}
