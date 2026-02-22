@@ -909,3 +909,38 @@ details summary{
  border: none !important;
  box-shadow: none !important;
 }
+/* === FINAL FIX: no frame, no cropping, true transparent product === */
+
+.gallery__main{
+ background: transparent !important;
+ border: none !important;
+ box-shadow: none !important;
+ overflow: visible !important;   /* stop clipping */
+}
+
+.product-image-frame{
+ background: transparent !important;
+ border: none !important;
+ box-shadow: none !important;
+
+ aspect-ratio: auto !important;  /* stop forcing a square */
+ overflow: visible !important;   /* stop clipping */
+
+ padding: 0 !important;
+ margin: 0 auto 28px !important; /* adds gap below product */
+ max-width: 520px;               /* adjust bigger/smaller */
+}
+
+.product-image{
+ width: 100% !important;
+ height: auto !important;        /* critical: prevents cut-off */
+ max-height: none !important;
+
+ object-fit: contain !important;
+ object-position: center !important;
+
+ border-radius: 0 !important;    /* “Nike” clean */
+ background: transparent !important;
+ aspect-ratio: auto !important;  /* overrides any gallery img rules */
+ display: block !important;
+}
