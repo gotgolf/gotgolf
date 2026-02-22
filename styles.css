@@ -596,18 +596,21 @@ code{
  .burger{ display:inline-block; }
  .stickyBar{ display:block; }
 }
-.product-image-frame {
+.product-image-frame{
  width: 100%;
- max-width: 520px;
- aspect-ratio: 1 / 1;
+ max-width: 620px;          /* bigger than your current 520px */
  border-radius: 18px;
  overflow: hidden;
- background: #0f1412;
+
+ background: #FFFFFF;       /* removes the black frame */
+ border: 1px solid rgba(28,31,29,.08);
+
  display: flex;
  align-items: center;
  justify-content: center;
- padding: 14px;
- box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+
+ padding: 18px;             /* even spacing around product */
+ box-shadow: 0 10px 24px rgba(0,0,0,.06); /* softer premium shadow */
 }
 
 .product-image {
@@ -616,7 +619,7 @@ code{
  object-fit: contain;   /* THIS is the key */
  object-position: center;
  display: block;
- border-radius: 12px;
+ border-radius: 0;
 }
 .bunnyEmbed {
  width: 100%;
