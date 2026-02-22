@@ -385,17 +385,25 @@ h2{ margin:0 0 6px; font-size: 28px; letter-spacing: -.4px; }
 .subhead{ margin:0; color: rgba(233,238,243,.74); }
 
 .videoGrid{
- display:grid;
- grid-template-columns: repeat(3, 1fr);
- gap: 14px;
- margin-top: 14px;
+display:grid;
+grid-template-columns: repeat(3, minmax(0, 300px));
+justify-content: center;
+gap: 28px;
+margin-top: 24px;
 }
 .videoCard{
- border: 1px solid rgba(255,255,255,.10);
- border-radius: var(--r);
- background: rgba(255,255,255,.03);
- overflow:hidden;
- margin:0;
+border: 1px solid rgba(28,31,29,.08);
+border-radius: 20px;
+background: #FFFFFF;
+overflow:hidden;
+margin:0;
+box-shadow: 0 12px 30px rgba(0,0,0,.05);
+transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.videoCard:hover{
+transform: translateY(-4px);
+box-shadow: 0 18px 40px rgba(0,0,0,.08);
 }
 .videoCard video{
  width:100%;
