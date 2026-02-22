@@ -29,8 +29,8 @@ body{
  color:var(--text);
  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
  background:
-   radial-gradient(900px 540px at 15% -10%, rgba(0,122,51,.28), transparent 60%),
-   radial-gradient(700px 520px at 90% 0%, rgba(10,168,75,.18), transparent 55%),
+   radial-gradient(900px 540px at 15% -10%, rgba(0,122,51,.10), transparent 60%),
+   radial-gradient(700px 520px at 90% 0%, rgba(180,90,60,.10), transparent 55%),
    var(--bg);
 }
 
