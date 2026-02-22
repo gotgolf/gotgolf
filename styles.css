@@ -875,3 +875,9 @@ details summary{
  display: block;
  margin: 0 auto;
 }
+
+/* Add breathing room below product image */
+
+.product-image-frame{
+ margin-bottom: 60px;   /* increase or decrease as you like */
+}
