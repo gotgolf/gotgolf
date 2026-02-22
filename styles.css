@@ -842,3 +842,7 @@ details summary{
  display: block;
  margin: 0 auto;
 }
+
+.gallery{
+ background: transparent !important;
+}
