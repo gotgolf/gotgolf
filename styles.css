@@ -601,7 +601,7 @@ code{
  max-width: 680px;   /* makes it slightly larger */
  margin: 0 auto;
 
- background: transparent;
+ 
  border: none;
  box-shadow: none;
  padding: 0;
@@ -773,9 +773,7 @@ details summary{
 
 /* ===== CLEAN PRODUCT IMAGE FRAME ===== */
 
-.gallery{
- background: transparent;   /* remove black background */
-}
+
 
 .gallery__main{
  background: #FFFFFF;       /* clean white frame */
@@ -796,12 +794,7 @@ details summary{
 
 /* ===== FIX DARK GALLERY BACKGROUND ===== */
 
-.gallery{
- background: transparent !important;
-}
 
-.gallery__track{
- background: transparent !important;
 }
 
 .gallery__main{
@@ -827,11 +820,7 @@ details summary{
 
 /* ===== REMOVE BLACK FRAME ===== */
 
-.gallery__main{
- background: transparent !important;
- border: none !important;
- box-shadow: none !important;
- padding: 0 !important;
+
 }
 
 /* ===== ENLARGE MAIN PRODUCT IMAGE ===== */
@@ -844,8 +833,7 @@ details summary{
  margin: 0 auto;
 }
 
-.gallery{
- background: transparent !important;
+
 }
 
 /* ===== FORCE REMOVE ALL DARK GALLERY BACKGROUNDS ===== */
@@ -854,7 +842,7 @@ details summary{
 .gallery__track,
 .gallery__viewport,
 .gallery__main{
- background: transparent !important;
+
  box-shadow: none !important;
  border: none !important;
 }
@@ -905,21 +893,21 @@ details summary{
 .gallery,
 .gallery__main,
 .gallery__track{
- background: transparent !important;
+
  border: none !important;
  box-shadow: none !important;
 }
 /* === FINAL FIX: no frame, no cropping, true transparent product === */
 
 .gallery__main{
- background: transparent !important;
+;
  border: none !important;
  box-shadow: none !important;
  overflow: visible !important;   /* stop clipping */
 }
 
 .product-image-frame{
- background: transparent !important;
+
  border: none !important;
  box-shadow: none !important;
 
@@ -946,14 +934,14 @@ details summary{
 /* === FINAL OVERRIDE: clean Nike-style product image (no checker, no crop) === */
 
 .gallery{
- background: transparent !important;
+ 
  border: none !important;
  box-shadow: none !important;
  padding: 0 !important;
 }
 
 .gallery__main{
- background: transparent !important;
+
  border: none !important;
  box-shadow: none !important;
  overflow: visible !important;  /* IMPORTANT: stop clipping */
@@ -971,6 +959,6 @@ details summary{
  height: auto !important;
  aspect-ratio: auto !important;
  object-fit: contain !important;
- background: transparent !important;
+
  display: block !important;
 }
