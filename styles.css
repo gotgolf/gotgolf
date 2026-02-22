@@ -916,7 +916,7 @@ details summary{
 
  padding: 0 !important;
  margin: 0 auto 28px !important; /* adds gap below product */
- max-width: 520px;               /* adjust bigger/smaller */
+ max-width: 400px;               /* adjust bigger/smaller */
 }
 
 .product-image{
