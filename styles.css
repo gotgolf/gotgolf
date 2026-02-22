@@ -881,3 +881,31 @@ details summary{
 .product-image-frame{
  margin-bottom: 60px;   /* increase or decrease as you like */
 }
+
+/* ===== FIX CUT OFF PRODUCT ===== */
+
+.product-image-frame{
+ overflow: visible !important;
+ padding-bottom: 40px;   /* creates breathing room below */
+}
+
+/* ===== ENSURE FULL IMAGE SHOWS ===== */
+
+.product-image{
+ width: 100%;
+ height: auto;
+ max-height: none !important;
+ object-fit: contain;
+ display: block;
+}
+
+/* ===== REMOVE ANY BACKGROUND BEHIND IMAGE ===== */
+
+.product-image-frame,
+.gallery,
+.gallery__main,
+.gallery__track{
+ background: transparent !important;
+ border: none !important;
+ box-shadow: none !important;
+}
