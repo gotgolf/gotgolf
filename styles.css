@@ -1007,3 +1007,40 @@ details summary{
 
  display: block !important;
 }
+/* ===== FINAL: Desktop video sizing + premium layout ===== */
+@media (min-width: 981px){
+ /* Make the whole video section feel curated */
+ .videoGrid{
+   grid-template-columns: repeat(3, 280px) !important; /* <-- controls desktop size */
+   justify-content: center !important;
+   gap: 28px !important;
+   margin-top: 24px !important;
+ }
+
+ /* Make each card not stretch wider than intended */
+ .videoCard{
+   max-width: 280px;
+   margin: 0 auto;
+   border-radius: 20px;
+   background: #FFFFFF;
+   border: 1px solid rgba(28,31,29,.08);
+   box-shadow: 0 12px 30px rgba(0,0,0,.05);
+   overflow: hidden;
+ }
+
+ /* If your videos are <video> tags */
+ .videoCard video{
+   width: 100% !important;
+   height: auto !important;
+   object-fit: cover;
+ }
+
+ /* If your videos are Bunny iframes */
+ .bunnyEmbed{
+   width: 100% !important;
+   max-width: 280px !important;   /* extra safety */
+   margin: 0 auto !important;
+   display: block !important;
+   border-radius: 18px;
+ }
+}
