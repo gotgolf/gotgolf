@@ -527,9 +527,18 @@ font-size: 16px;
  object-fit: cover;
  border: 1px solid rgba(255,255,255,.10);
 }
-.stickyName{ font-weight: 900; font-size: 13px; }
-.stickyPrice{ color: rgba(233,238,243,.72); font-size: 12px; }
+.stickyName{
+ font-weight: 800;
+ font-size: 13px;
+ color: rgba(28,31,29,.92);
+}
 
+.stickyPrice{
+ font-size: 16px;
+ font-weight: 900;
+ letter-spacing: -0.2px;
+ color: var(--green);
+}
 /* Drawer */
 .drawer{
  position: fixed;
