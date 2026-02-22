@@ -1,15 +1,22 @@
-:root{
- /* Pantone 356 C vibe (approx for web) */
- --green: #007A33;
- --green2: #0AA84B;
 
- --bg: #0b0d0f;
- --panel: #111418;
- --panel2: rgba(255,255,255,.03);
- --text: #e9eef3;
- --muted: rgba(233,238,243,.72);
- --line: rgba(255,255,255,.10);
- --shadow: 0 18px 60px rgba(0,0,0,.50);
+:root{
+ /* Brand greens (keep) */
+ --green: #007A33;     /* main golf green */
+ --green2:#0AA84B;     /* lighter green */
+
+ /* Option C: Cream + Clay */
+ --bg:     #F6F1E6;    /* cream page background */
+ --panel:  #FFFFFF;    /* card/panel */
+ --panel2: #FBF3E6;    /* warm cream section alt */
+ --text:   #1E2320;    /* charcoal text */
+ --muted:  #4C5A52;    /* muted text */
+ --line:   rgba(30,35,32,.12);
+ --shadow: 0 18px 60px rgba(30,35,32,.10);
+
+ /* Clay / terracotta accent */
+ --clay:   #B45A3C;    /* main clay accent */
+ --clay2:  #D07A5C;    /* lighter clay for hovers */
+
  --r: 18px;
  --r2: 24px;
  --max: 1180px;
