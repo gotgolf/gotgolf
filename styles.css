@@ -943,4 +943,34 @@ details summary{
  aspect-ratio: auto !important;  /* overrides any gallery img rules */
  display: block !important;
 }
+/* === FINAL OVERRIDE: clean Nike-style product image (no checker, no crop) === */
 
+.gallery{
+ background: transparent !important;
+ border: none !important;
+ box-shadow: none !important;
+ padding: 0 !important;
+}
+
+.gallery__main{
+ background: transparent !important;
+ border: none !important;
+ box-shadow: none !important;
+ overflow: visible !important;  /* IMPORTANT: stop clipping */
+ border-radius: 0 !important;
+ padding: 0 !important;
+ display: flex !important;
+ justify-content: center !important;
+ align-items: center !important;
+}
+
+/* IMPORTANT: do NOT force 4:3 or cover */
+.gallery__main img{
+ width: 100% !important;
+ max-width: 520px !important;
+ height: auto !important;
+ aspect-ratio: auto !important;
+ object-fit: contain !important;
+ background: transparent !important;
+ display: block !important;
+}
