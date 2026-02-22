@@ -940,13 +940,7 @@ details summary{
  object-position: center !important;
 
  border-radius: 0 !important;    /* “Nike” clean */
- background: transparent !important;
  aspect-ratio: auto !important;  /* overrides any gallery img rules */
  display: block !important;
 }
 
-.product-image-frame,
-.gallery__main{
- background: transparent !important;
- background-image: none !important;
-}
