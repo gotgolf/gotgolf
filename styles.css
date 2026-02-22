@@ -769,3 +769,57 @@ details summary{
  padding: 10px 16px;
  border-radius: 999px;
 }
+
+/* ===== CLEAN PRODUCT IMAGE FRAME ===== */
+
+.gallery{
+ background: transparent;   /* remove black background */
+}
+
+.gallery__main{
+ background: #FFFFFF;       /* clean white frame */
+ padding: 40px;             /* space around image */
+ border-radius: 20px;
+ border: 1px solid rgba(28,31,29,.08);
+ box-shadow: 0 12px 30px rgba(0,0,0,.05);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.gallery__main img{
+ max-width: 100%;
+ height: auto;
+ display: block;
+}
+
+/* ===== FIX DARK GALLERY BACKGROUND ===== */
+
+.gallery{
+ background: transparent !important;
+}
+
+.gallery__track{
+ background: transparent !important;
+}
+
+.gallery__main{
+ background: #FFFFFF !important;
+ padding: 40px;
+ border-radius: 20px;
+ border: 1px solid rgba(28,31,29,.08);
+ box-shadow: 0 12px 30px rgba(0,0,0,.05);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.gallery__thumbs{
+ background: transparent !important;
+}
+
+.gallery__thumb{
+ background: #FFFFFF;
+ border: 1px solid rgba(28,31,29,.08);
+ border-radius: 12px;
+}
