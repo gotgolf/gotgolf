@@ -598,19 +598,17 @@ code{
 }
 .product-image-frame{
  width: 100%;
- max-width: 620px;          /* bigger than your current 520px */
- border-radius: 18px;
- overflow: hidden;
+ max-width: 680px;   /* makes it slightly larger */
+ margin: 0 auto;
 
- background: #FFFFFF;       /* removes the black frame */
- border: 1px solid rgba(28,31,29,.08);
+ background: transparent;
+ border: none;
+ box-shadow: none;
+ padding: 0;
 
  display: flex;
  align-items: center;
  justify-content: center;
-
- padding: 18px;             /* even spacing around product */
- box-shadow: 0 10px 24px rgba(0,0,0,.06); /* softer premium shadow */
 }
 
 .product-image {
