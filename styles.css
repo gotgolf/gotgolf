@@ -483,14 +483,32 @@ h2{ margin:0 0 6px; font-size: 28px; letter-spacing: -.4px; }
 
 /* Sticky buy bar (mobile) */
 .stickyBar{
- position: fixed;
- left: 0; right: 0; bottom: 0;
- z-index: 60;
- padding: 10px 0;
- background: rgba(17,20,24,.86);
- border-top: 1px solid rgba(255,255,255,.10);
- backdrop-filter: blur(10px);
- display:none;
+position: fixed;
+left: 0;
+right: 0;
+bottom: 0;
+z-index: 60;
+
+padding: 14px 0;
+
+background: rgba(245,239,228,.95);   /* matches site cream */
+backdrop-filter: blur(10px);
+
+border-top: 1px solid rgba(28,31,29,.08);
+box-shadow: 0 -10px 30px rgba(0,0,0,.06);
+
+display: none;
+}
+
+.stickyName{
+color: rgba(28,31,29,.92);
+font-weight: 700;
+}
+
+.stickyPrice{
+color: var(--green);
+font-weight: 800;
+font-size: 16px;
 }
 .stickyBar__inner{
  display:flex;
