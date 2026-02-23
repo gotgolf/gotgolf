@@ -1041,3 +1041,18 @@ details summary{
  display: block !important;
  border: 0 !important;
 }
+
+/* Premium mobile-nav CTA */
+.navBuyCta{
+ border-radius: 999px;
+ padding: 14px 18px;
+ font-weight: 800;
+ letter-spacing: .2px;
+ box-shadow: 0 12px 28px rgba(0,0,0,.18);
+ background: linear-gradient(135deg, #1f7a3a, #16632e);
+ border: 1px solid rgba(255,255,255,.18);
+}
+
+.navBuyCta:hover{
+ transform: translateY(-2px);
+}
