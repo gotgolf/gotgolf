@@ -1065,37 +1065,59 @@ details summary{
  filter: brightness(1.03);
 }
 
-/* Premium Mobile Nav Buy Button */
+/* ===== Premium pill "Buy now" inside the mobile menu ===== */
 
+#mobileNav{
+ /* gives the menu breathing room so it doesn't feel cramped */
+ padding-bottom: 18px;
+}
+
+/* Override the full-width bar look */
 #mobileNav #buyStickyMobile{
- display: inline-flex;
+ width: fit-content !important;         /* makes it short */
+ max-width: none !important;
+ display: inline-flex !important;
  align-items: center;
  justify-content: center;
 
- width: 100%;
- padding: 16px 22px;
+ padding: 12px 22px !important;         /* pill sizing */
+ border-radius: 999px !important;
 
- font-size: 17px;
- font-weight: 700;
- letter-spacing: .3px;
+ font-size: 14px !important;
+ font-weight: 800 !important;
+ letter-spacing: .4px !important;
+ text-transform: uppercase !important;  /* premium feel */
+ line-height: 1 !important;
 
- border-radius: 999px;
- border: none;
+ /* Premium dark/green (best match for your site) */
+ color: #fff !important;
+ background: linear-gradient(135deg, #1E6F37, #134B26) !important;
+ border: 1px solid rgba(255,255,255,.16) !important;
 
- color: #ffffff;
- background: linear-gradient(135deg, #1e6f37, #14512a);
+ box-shadow:
+   0 10px 24px rgba(0,0,0,.18),
+   inset 0 1px 0 rgba(255,255,255,.14) !important;
 
- box-shadow: 
-   0 10px 25px rgba(0,0,0,.18),
-   inset 0 1px 0 rgba(255,255,255,.15);
-
- transition: all .25s ease;
+ margin-top: 14px !important;
 }
 
+/* Center it within the mobile menu */
+#mobileNav{
+ text-align: left; /* keep links normal */
+}
+#mobileNav #buyStickyMobile{
+ margin-left: 0 !important;
+}
+
+/* If you want it centered under the links, uncomment these 2 lines:
+#mobileNav{ text-align:center; }
+#mobileNav a{ text-align:left; display:block; }
+*/
+
 #mobileNav #buyStickyMobile:hover{
- transform: translateY(-2px);
- box-shadow: 
-   0 16px 40px rgba(0,0,0,.22),
-   inset 0 1px 0 rgba(255,255,255,.15);
+ transform: translateY(-1px);
+ box-shadow:
+   0 16px 34px rgba(0,0,0,.22),
+   inset 0 1px 0 rgba(255,255,255,.14) !important;
 }
 
