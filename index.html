@@ -1,359 +1,395 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Got Golf — Anti-Slice Rub</title>
-<meta name="description" content="Hit straighter, longer shots with Got Golf Anti-Slice Rub. Clean, easy application. Secure checkout." />
-<meta property="og:title" content="Got Golf — Anti-Slice Rub" />
-<meta property="og:description" content="Hit straighter, longer shots with Anti-Slice Rub." />
-<meta property="og:type" content="website" />
-<meta property="og:image" content="assets/main.png" />
-<link rel="icon" href="assets/logo.png" />
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="styles.css" />
-
-<style>
- /* Force a luxury 2-column video grid on desktop */
- #videos .videoGrid{
-   display:grid;
-   grid-template-columns: repeat(2, minmax(0, 440px));
-   justify-content:center;
-   gap:32px;
-   margin-top:18px;
- }
- /* Keep mobile stacked */
- @media (max-width: 980px){
-   #videos .videoGrid{ grid-template-columns: 1fr; gap:18px; }
- }
- /* Make sure embeds fill their card */
- #videos .bunnyEmbed{
-   width:100%;
-   aspect-ratio:16 / 9;
-   border:0;
-   display:block;
- }
-</style>
+ <meta charset="utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <title>Got Golf — Anti-Slice Rub</title>
+ <meta name="description" content="Hit straighter, longer shots with Got Golf Anti-Slice Rub. Clean, easy application. Secure checkout." />
+ <meta property="og:title" content="Got Golf — Anti-Slice Rub" />
+ <meta property="og:description" content="Hit straighter, longer shots with Anti-Slice Rub." />
+ <meta property="og:type" content="website" />
+ <meta property="og:image" content="assets/main-trans.png" />
+ <link rel="icon" href="assets/logo.png" />
+ <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-
  <!-- Top bar -->
- <div class="topbar">
-   <span>Free shipping</span>
-   <span class="dot">•</span>
-   <span>30-day returns</span>
+ <div class="topbar" role="status">
+   <span>Free shipping over $40</span>
    <span class="dot">•</span>
    <span>Secure checkout</span>
+   <span class="dot">•</span>
+   <span>Made for straighter ball flight</span>
  </div>
 
  <!-- Header -->
  <header class="header">
    <div class="container header__inner">
      <a class="brand" href="#">
-       <img class="brand__logo" src="assets/logo.png" alt="Got Golf Logo" />
+       <img src="assets/logo.png" alt="Got Golf logo" class="brand__logo" />
        <span class="brand__name">Got Golf</span>
      </a>
 
      <nav class="nav">
-       <a href="#videos">Videos</a>
+       <a href="#details">Details</a>
+       <a href="#videos">Demos</a>
        <a href="#reviews">Reviews</a>
        <a href="#faq">FAQ</a>
      </nav>
 
      <div class="header__actions">
-       <button class="btn btn--ghost" id="openCart" type="button">
+       <button class="btn btn--ghost" id="openMiniCart" type="button" aria-label="Open cart">
          Cart <span class="pillCount" id="cartCount">0</span>
        </button>
      </div>
 
-     <button class="burger" id="burger" aria-label="Open menu">
+     <button class="burger" id="burger" type="button" aria-label="Open menu">
        <span></span><span></span><span></span>
      </button>
    </div>
 
-   <div class="mobileNav" id="mobileNav" style="display:none;">
-     <a href="#videos">Videos</a>
+   <div class="mobileNav" id="mobileNav" hidden>
+     <a href="#details">Details</a>
+     <a href="#videos">Demos</a>
      <a href="#reviews">Reviews</a>
      <a href="#faq">FAQ</a>
+     <button class="btn btn--primary btn--full" id="buyStickyMobile" type="button">Buy Anti-Slice Rub</button>
    </div>
  </header>
 
+ <!-- Main product section -->
  <main class="container productPage">
-
-   <!-- Product grid -->
    <section class="productGrid">
      <!-- Gallery -->
      <div class="gallery">
        <div class="gallery__main">
          <div class="product-image-frame">
-           <img class="product-image" src="assets/main.png" alt="Got Golf Anti-Slice Rub" />
-         </div>
-       </div>
+ <img class="product-image" src="assets/main-trans.png" alt="Got Golf Anti-Slice Rub">
+</div>
 
-       <div class="thumbs">
-         <button class="thumb isActive" data-img="assets/main.png"><img src="assets/main.png" alt=""></button>
-         <button class="thumb" data-img="assets/product-2.jpg"><img src="assets/product-2.jpg" alt=""></button>
-         <button class="thumb" data-img="assets/product-3.jpg"><img src="assets/product-3.jpg" alt=""></button>
-         <button class="thumb" data-img="assets/product-4.jpg"><img src="assets/product-4.jpg" alt=""></button>
-       </div>
+    
 
        <div class="galleryBadges">
-         <span class="badge">Clean application</span>
-         <span class="badge">Built for golfers</span>
-         <span class="badge">Fast shipping</span>
+         <div class="badge">Clean application</div>
+         <div class="badge">Built for golfers</div>
+         <div class="badge">Fast shipping</div>
        </div>
      </div>
 
-     <!-- Buy box -->
-     <aside class="buyBox">
-       <span class="kicker">New • Anti-slice training aid</span>
-       <h1 class="title">Anti-Slice Rub</h1>
+     <!-- Buy box (sticky) -->
+     <aside class="buyBox" aria-label="Purchase Anti-Slice Rub">
+       <div class="kicker">Anti-Slice Rub</div>
+       <h1 class="title">Hit straighter, longer shots.</h1>
 
        <div class="ratingRow">
-         <div class="stars">★★★★★</div>
-         <a class="ratingLink" href="#reviews">Read reviews</a>
+         <div class="stars" aria-label="4.8 out of 5 stars">
+           ★★★★★
+         </div>
+         <a href="#reviews" class="ratingLink"><span id="reviewCount">128</span> reviews</a>
        </div>
 
        <div class="priceRow">
-         <div>
-           <span class="price__now">$24.99</span>
-           <span class="price__compare">$39.99</span>
+         <div class="price">
+           <span class="price__now" id="priceNow">$24.99</span>
+           <span class="price__compare" id="priceCompare">$29.99</span>
          </div>
-         <span class="save">Save 38%</span>
+         <span class="save" id="saveBadge">Save 17%</span>
        </div>
 
        <p class="subcopy">
-         Hit straighter, longer shots with a clean, simple application.
+         Designed to help reduce slice and promote a more consistent, playable ball flight.
        </p>
 
        <div class="buyControls">
-         <div class="field">
+         <label class="field">
            <span>Quantity</span>
            <div class="qty">
-             <button class="qty__btn" id="decQty" type="button">−</button>
-             <input id="qty" type="number" value="1" min="1" />
-             <button class="qty__btn" id="incQty" type="button">+</button>
+             <button class="qty__btn" id="qtyDown" type="button" aria-label="Decrease quantity">−</button>
+             <input id="qty" type="number" min="1" value="1" inputmode="numeric" />
+             <button class="qty__btn" id="qtyUp" type="button" aria-label="Increase quantity">+</button>
            </div>
-         </div>
+         </label>
 
          <div class="ctaStack">
-           <button class="btn btn--primary btn--full" id="addToCart" type="button">Add to cart</button>
-           <button class="btn btn--ghost btn--full" id="buyNow" type="button">Buy now</button>
-         </div>
-
-         <div class="fine">
-           <span>✓ Secure checkout</span>
-           <span>✓ Fast shipping</span>
-           <span>✓ 30-day returns</span>
-         </div>
-
-         <div class="trustGrid">
-           <div class="trustItem">
-             <div class="trustTitle">Clean</div>
-             <div class="trustText">No mess, easy use</div>
-           </div>
-           <div class="trustItem">
-             <div class="trustTitle">Fast</div>
-             <div class="trustText">Ships quickly</div>
-           </div>
-           <div class="trustItem">
-             <div class="trustTitle">Safe</div>
-             <div class="trustText">Secure payment</div>
+           <button class="btn btn--primary btn--full" id="addToCart" type="button">
+             Add to cart
+           </button>
+           <a class="btn btn--ghost btn--full" id="buyNow" href="#" target="_blank" rel="noopener">
+             Buy it now
+           </a>
+           <div class="fine">
+             <span>Secure checkout</span>
+             <span class="dot">•</span>
+             <span>Apple Pay / Google Pay (via Stripe)</span>
            </div>
          </div>
+       </div>
 
-         <div class="accordion">
-           <details open>
-             <summary>Description</summary>
-             <div class="accBody">
-               <p>Anti-Slice Rub helps promote a cleaner clubface and encourages straighter shots.</p>
-               <ul>
-                 <li>Quick application</li>
-                 <li>Built for golfers</li>
-                 <li>Great for range sessions</li>
-               </ul>
-             </div>
-           </details>
-
-           <details>
-             <summary>How to use</summary>
-             <div class="accBody">
-               <ol>
-                 <li>Apply as directed.</li>
-                 <li>Hit a few shots.</li>
-                 <li>Adjust and repeat.</li>
-               </ol>
-             </div>
-           </details>
-
-           <details>
-             <summary>Shipping & returns</summary>
-             <div class="accBody">
-               <p>Fast shipping. 30-day returns.</p>
-             </div>
-           </details>
+       <div class="trustGrid">
+         <div class="trustItem">
+           <div class="trustTitle">Fast</div>
+           <div class="trustText">Easy to apply</div>
          </div>
+         <div class="trustItem">
+           <div class="trustTitle">Clean</div>
+           <div class="trustText">No messy routine</div>
+         </div>
+         <div class="trustItem">
+           <div class="trustTitle">Confident</div>
+           <div class="trustText">Built for consistency</div>
+         </div>
+       </div>
+
+       <div class="accordion" id="details">
+         <details open>
+           <summary>Description</summary>
+           <div class="accBody">
+             <p>
+               Got Golf Anti-Slice Rub is designed to help golfers reduce slice and improve consistency.
+               Use it as part of your pre-round routine and swing with confidence.
+             </p>
+             <ul>
+               <li>Designed for straighter ball flight</li>
+               <li>Quick, clean application</li>
+               <li>Made for golfers of all levels</li>
+             </ul>
+           </div>
+         </details>
+
+         <details>
+           <summary>How to use</summary>
+           <div class="accBody">
+             <ol>
+               <li>Apply Anti-Slice Rub as directed before your session.</li>
+               <li>Take your normal swings — focus on solid contact.</li>
+               <li>Track your ball flight and consistency over time.</li>
+             </ol>
+             <p class="fine">Tip: Watch the demo videos for examples.</p>
+           </div>
+         </details>
+
+         <details>
+           <summary>Shipping</summary>
+           <div class="accBody">
+             <p>Orders typically ship in 1–2 business days. Delivery times vary by location.</p>
+             <p class="fine">Update this with your exact shipping policy once finalized.</p>
+           </div>
+         </details>
+
+         <details>
+           <summary>Returns</summary>
+           <div class="accBody">
+             <p>Add your return policy here (or link to a policy page).</p>
+           </div>
+         </details>
        </div>
      </aside>
    </section>
 
    <!-- Video demos -->
-  <section class="section section--alt" id="videos">
-    <div class="sectionHead">
-      <div>
-        <h2>Watch it work</h2>
-        <p class="subhead">Real demos using your clips.</p>
-      </div>
-      <button class="btn btn--ghost" id="muteAll" type="button">Mute all</button>
-    </div>
+   <section class="section section--alt" id="videos">
+     <div class="sectionHead">
+       <div>
+         <h2>Watch it work</h2>
+         <p class="subhead">Real demos using your clips.</p>
+       </div>
+       <button class="btn btn--ghost" id="muteAll" type="button">Mute all</button>
+     </div>
+<div class="videoGrid">
+  
+<figure class="videoCard">
+    <iframe class="bunnyEmbed"
 
-    <div class="videoGrid">
-      <figure class="videoCard">
-        <iframe class="bunnyEmbed"
-          src="https://player.mediadelivery.net/embed/603760/08a5f5c6-5ec1-4a1e-a0f3-719de9a48202"
-          loading="lazy"
-          allow="fullscreen; picture-in-picture"
-          allowfullscreen></iframe>
-        <figcaption>Demo 1</figcaption>
-      </figure>
+      src="https://player.mediadelivery.net/embed/603760/08a5f5c6-5ec1-4a1e-a0f3-719de9a48202"
 
-      <figure class="videoCard">
-        <iframe class="bunnyEmbed"
-          src="https://player.mediadelivery.net/embed/603760/bb3baa79-b626-4e56-acf4-eca13fffb69c"
-          loading="lazy"
-          allow="fullscreen; picture-in-picture"
-          allowfullscreen></iframe>
-        <figcaption>Demo 2</figcaption>
-      </figure>
+      loading="lazy"
 
-      <figure class="videoCard">
-        <iframe class="bunnyEmbed"
-          src="https://player.mediadelivery.net/embed/603760/5482cfdf-ca14-4b49-b689-7aeefdba0e28"
-          loading="lazy"
-          allow="fullscreen; picture-in-picture"
-          allowfullscreen></iframe>
-        <figcaption>Demo 3</figcaption>
-      </figure>
+      allow="fullscreen; picture-in-picture"
 
-      <figure class="videoCard">
-        <iframe class="bunnyEmbed"
-          src="https://player.mediadelivery.net/embed/603760/5c9626d1-b968-48a0-ac2f-5356251520da"
-          loading="lazy"
-          allow="fullscreen; picture-in-picture"
-          allowfullscreen></iframe>
-        <figcaption>Demo 4</figcaption>
-      </figure>
+      allowfullscreen>
 
-      <figure class="videoCard">
-        <iframe class="bunnyEmbed"
-          src="https://player.mediadelivery.net/embed/603760/406ce629-8f05-4379-add4-0cadd50b96d5?autoplay=false&loop=false&muted=false&preload=false&responsive=true"
-          loading="lazy"
-          allow="fullscreen; picture-in-picture"
-          allowfullscreen></iframe>
-        <figcaption>Demo 5</figcaption>
-      </figure>
-    </div>
-  </section>
-<!-- Reviews -->
+    </iframe>
+
+    <figcaption>Demo 1</figcaption>
+
+  </figure>
+
+
+
+  <figure class="videoCard">
+
+    <iframe class="bunnyEmbed"
+
+      src="https://player.mediadelivery.net/embed/603760/bb3baa79-b626-4e56-acf4-eca13fffb69c"
+      loading="lazy"
+
+      allow="fullscreen; picture-in-picture"
+
+      allowfullscreen>
+
+    </iframe>
+
+    <figcaption>Demo 2</figcaption>
+
+  </figure>
+
+
+
+  <figure class="videoCard">
+
+    <iframe class="bunnyEmbed"
+
+      src="https://player.mediadelivery.net/embed/603760/5482cfdf-ca14-4b49-b689-7aeefdba0e28"
+      loading="lazy"
+
+      allow="fullscreen; picture-in-picture"
+
+      allowfullscreen>
+
+    </iframe>
+
+    <figcaption>Demo 3</figcaption>
+
+  </figure>
+
+
+
+  <figure class="videoCard">
+
+    <iframe class="bunnyEmbed"
+
+      src="https://player.mediadelivery.net/embed/603760/5c9626d1-b968-48a0-ac2f-5356251520da"
+
+      loading="lazy"
+
+      allow="fullscreen; picture-in-picture"
+
+      allowfullscreen>
+
+    </iframe>
+
+    <figcaption>Demo 4</figcaption>
+
+  </figure>
+
+
+
+  <figure class="videoCard">
+
+    <iframe class="bunnyEmbed"
+
+      src="https://player.mediadelivery.net/embed/603760/406ce629-8f05-4379-add4-0cadd50b96d5?autoplay=false&loop=false&muted=false&preload=false&responsive=true" loading="lazy"
+      loading="lazy"
+
+      allow="fullscreen; picture-in-picture"
+
+      allowfullscreen>
+
+    </iframe>
+
+    <figcaption>Demo 5</figcaption>
+
+  </figure>
+
+</div>
+
+
+   </section>
+
+   <!-- Reviews -->
    <section class="section" id="reviews">
      <div class="sectionHead">
        <div>
          <h2>Reviews</h2>
-         <p class="subhead">Real feedback from golfers.</p>
+         <p class="subhead">Social proof section (replace with real testimonials when ready).</p>
        </div>
      </div>
 
      <div class="reviewSummary">
        <div class="reviewScore">
-         <div class="score">4.9</div>
+         <div class="score">4.8</div>
          <div class="starsBig">★★★★★</div>
-         <div class="subhead">Based on 112 reviews</div>
+         <div class="fine">Based on <span id="reviewCount2">128</span> reviews</div>
        </div>
 
        <div class="reviewBars">
-         <div class="barRow"><span>5★</span><div class="bar"><i style="width:84%"></i></div><span>84%</span></div>
-         <div class="barRow"><span>4★</span><div class="bar"><i style="width:12%"></i></div><span>12%</span></div>
-         <div class="barRow"><span>3★</span><div class="bar"><i style="width:3%"></i></div><span>3%</span></div>
+         <div class="barRow"><span>5★</span><div class="bar"><i style="width:78%"></i></div><span>78%</span></div>
+         <div class="barRow"><span>4★</span><div class="bar"><i style="width:16%"></i></div><span>16%</span></div>
+         <div class="barRow"><span>3★</span><div class="bar"><i style="width:4%"></i></div><span>4%</span></div>
          <div class="barRow"><span>2★</span><div class="bar"><i style="width:1%"></i></div><span>1%</span></div>
-         <div class="barRow"><span>1★</span><div class="bar"><i style="width:0%"></i></div><span>0%</span></div>
+         <div class="barRow"><span>1★</span><div class="bar"><i style="width:1%"></i></div><span>1%</span></div>
        </div>
      </div>
 
      <div class="reviewsGrid">
        <article class="reviewCard">
          <div class="reviewTop">
-           <div>
-             <h3>Instant feedback</h3>
-             <div class="stars">★★★★★</div>
-           </div>
-           <div class="subhead">Verified</div>
+           <div class="stars">★★★★★</div>
+           <div class="fine">Verified buyer</div>
          </div>
-         <p>Helped me feel the face control immediately. Great training aid.</p>
+         <h3>Noticeably tighter ball flight</h3>
+         <p>After a few sessions my miss got way more playable. Easy to use and feels like a legit routine addition.</p>
+         <div class="fine">— Jordan</div>
        </article>
 
        <article class="reviewCard">
          <div class="reviewTop">
-           <div>
-             <h3>Clean and easy</h3>
-             <div class="stars">★★★★★</div>
-           </div>
-           <div class="subhead">Verified</div>
+           <div class="stars">★★★★★</div>
+           <div class="fine">Verified buyer</div>
          </div>
-         <p>No mess, super quick to use. My miss is much smaller now.</p>
+         <h3>Confidence on the tee</h3>
+         <p>I’m not thinking about slicing it into the trees. That alone is worth it.</p>
+         <div class="fine">— Sam</div>
        </article>
 
        <article class="reviewCard">
          <div class="reviewTop">
-           <div>
-             <h3>Worth it</h3>
-             <div class="stars">★★★★★</div>
-           </div>
-           <div class="subhead">Verified</div>
+           <div class="stars">★★★★☆</div>
+           <div class="fine">Verified buyer</div>
          </div>
-         <p>Simple product, but it works. Great for range sessions.</p>
+         <h3>Solid product</h3>
+         <p>Easy, clean application. I’m seeing more consistent starts and less curve.</p>
+         <div class="fine">— Alex</div>
        </article>
      </div>
    </section>
 
    <!-- FAQ -->
-   <section class="section" id="faq">
+   <section class="section section--alt" id="faq">
      <div class="sectionHead">
        <div>
          <h2>FAQ</h2>
-         <p class="subhead">Everything you need to know.</p>
+         <p class="subhead">Quick answers for buyers.</p>
        </div>
      </div>
 
      <div class="faq">
        <details>
-         <summary>How long does it last?</summary>
-         <p>Each unit is designed for multiple sessions depending on usage.</p>
+         <summary>What is Anti-Slice Rub?</summary>
+         <p>It’s a Got Golf product designed to help golfers reduce slice and improve consistency for straighter, longer shots.</p>
        </details>
-
        <details>
-         <summary>Is it messy?</summary>
-         <p>No — it’s designed for a clean application.</p>
+         <summary>How do I buy it?</summary>
+         <p>Use “Buy it now” for instant checkout (Stripe). Or “Add to cart” to purchase with quantity.</p>
        </details>
-
        <details>
-         <summary>How fast is shipping?</summary>
-         <p>We ship quickly and provide tracking after checkout.</p>
+         <summary>Do you ship nationwide?</summary>
+         <p>Yes — add your exact shipping coverage + timelines here.</p>
+       </details>
+       <details>
+         <summary>What’s your return policy?</summary>
+         <p>Add your return policy details here.</p>
        </details>
      </div>
    </section>
-
  </main>
 
- <!-- Sticky buy bar (mobile) -->
+ <!-- Sticky mobile bar -->
  <div class="stickyBar" id="stickyBar">
-   <div class="container stickyBar__inner">
+   <div class="stickyBar__inner container">
      <div class="stickyMini">
-       <img src="assets/logo.png" alt="Got Golf Logo">
+       <img src="assets/logo.png" alt="" />
        <div>
          <div class="stickyName">Anti-Slice Rub</div>
          <div class="stickyPrice">$24.99</div>
@@ -363,47 +399,51 @@
    </div>
  </div>
 
- <!-- Drawer -->
- <div class="drawer" id="drawer">
+ <!-- Mini cart drawer -->
+ <aside class="drawer" id="drawer" aria-hidden="true">
    <div class="drawer__overlay" id="drawerOverlay"></div>
-   <div class="drawer__panel">
+   <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Cart">
      <div class="drawer__head">
        <div>
-         <div class="drawer__title">Your cart</div>
-         <div class="drawer__sub">Ready to checkout</div>
+         <div class="drawer__title">Cart</div>
+         <div class="drawer__sub">Anti-Slice Rub</div>
        </div>
-       <button class="iconBtn" id="closeCart" aria-label="Close cart">✕</button>
-     </div>
-
-     <div class="drawer__body" id="cartItems">
-       <div class="cartLine">
-         <img src="assets/product-1.jpg" alt="">
-         <div>
-           <div class="cartLine__name">Anti-Slice Rub</div>
-           <div class="subhead">$24.99</div>
-         </div>
-         <div class="cartLine__price">$24.99</div>
-       </div>
+       <button class="iconBtn" id="closeDrawer" type="button" aria-label="Close cart">✕</button>
      </div>
 
      <div class="drawer__body">
-       <button class="btn btn--primary btn--full" type="button">Checkout</button>
+       <div class="cartLine">
+         <img src="assets/product-1.jpg" alt="" />
+         <div class="cartLine__info">
+           <div class="cartLine__name">Anti-Slice Rub</div>
+           <div class="fine">Quantity: <span id="cartQty">1</span></div>
+         </div>
+         <div class="cartLine__price" id="cartTotal">$24.99</div>
+       </div>
+
+       <a class="btn btn--primary btn--full" id="checkoutLink" href="#" target="_blank" rel="noopener">
+         Checkout
+       </a>
+
+       <p class="fine">
+         Secure checkout via Stripe. Replace the link in <code>script.js</code>.
+       </p>
      </div>
    </div>
- </div>
+ </aside>
 
  <footer class="footer">
    <div class="container footer__inner">
      <div class="footerBrand">
-       <img src="assets/logo.png" alt="Got Golf Logo">
+       <img src="assets/logo.png" alt="Got Golf logo" />
        <div>
          <div class="footerName">Got Golf</div>
-         <div class="subhead">© 2026 Got Golf</div>
+         <div class="fine">© <span id="year"></span> Got Golf</div>
        </div>
      </div>
-
      <div class="footerLinks">
-       <a href="#videos">Videos</a>
+       <a href="#details">Details</a>
+       <a href="#videos">Demos</a>
        <a href="#reviews">Reviews</a>
        <a href="#faq">FAQ</a>
      </div>
