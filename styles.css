@@ -1121,3 +1121,17 @@ details summary{
    inset 0 1px 0 rgba(255,255,255,.14) !important;
 }
 
+/* Center mobile nav Buy Now button */
+#mobileNav {
+ text-align: center;
+}
+
+#mobileNav a {
+ text-align: left;     /* keeps your menu links aligned properly */
+ display: block;
+}
+
+#mobileNav #buyStickyMobile {
+ margin: 18px auto 0 auto !important;
+}
+
