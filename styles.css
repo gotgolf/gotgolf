@@ -1065,3 +1065,37 @@ details summary{
  filter: brightness(1.03);
 }
 
+/* Premium Mobile Nav Buy Button */
+
+#mobileNav #buyStickyMobile{
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+
+ width: 100%;
+ padding: 16px 22px;
+
+ font-size: 17px;
+ font-weight: 700;
+ letter-spacing: .3px;
+
+ border-radius: 999px;
+ border: none;
+
+ color: #ffffff;
+ background: linear-gradient(135deg, #1e6f37, #14512a);
+
+ box-shadow: 
+   0 10px 25px rgba(0,0,0,.18),
+   inset 0 1px 0 rgba(255,255,255,.15);
+
+ transition: all .25s ease;
+}
+
+#mobileNav #buyStickyMobile:hover{
+ transform: translateY(-2px);
+ box-shadow: 
+   0 16px 40px rgba(0,0,0,.22),
+   inset 0 1px 0 rgba(255,255,255,.15);
+}
+
