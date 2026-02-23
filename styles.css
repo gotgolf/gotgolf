@@ -1053,4 +1053,40 @@ details summary{
    display: block !important;
    border-radius: 18px;
  }
+/* ===== FINAL OVERRIDE: Luxury 2-column videos ===== */
+@media (min-width: 981px){
+ #videos .videoGrid{
+   display: grid !important;
+   grid-template-columns: repeat(2, minmax(0, 420px)) !important;
+   justify-content: center !important;
+   gap: 32px !important;
+   margin-top: 20px !important;
+ }
+
+ #videos .videoCard{
+   max-width: 420px !important;
+   margin: 0 auto !important;
+   border-radius: 24px !important;
+   overflow: hidden !important;
+ }
+
+ #videos .bunnyEmbed{
+   width: 100% !important;
+   max-width: 420px !important;
+   aspect-ratio: 16 / 9 !important;
+   display: block !important;
+   border: 0 !important;
+ }
+}
+
+@media (max-width: 980px){
+ #videos .videoGrid{
+   grid-template-columns: 1fr !important;
+   gap: 18px !important;
+ }
+
+ #videos .bunnyEmbed{
+   width: 100% !important;
+   aspect-ratio: 16 / 9 !important;
+ }
 }
