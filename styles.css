@@ -1510,10 +1510,14 @@ details summary{
 
 /* Mobile only hero formatting */
 @media (max-width: 768px) {
+
  .hero-title {
    text-align: center;
-   line-height: 1.2;
-   margin-bottom: 10px; /* tighter spacing */
+   font-size: 34px;        /* Strong but not oversized */
+   font-weight: 800;       /* Bold, premium look */
+   line-height: 1.15;      /* Tight but readable */
+   letter-spacing: -0.5px; /* Slight tightening for impact */
+   margin-bottom: 8px;     /* Reduced space to subline */
  }
 
  .mobile-break {
@@ -1522,6 +1526,11 @@ details summary{
 
  .hero-sub {
    text-align: center;
+   font-size: 18px;        /* Clear but secondary */
+   font-weight: 500;       /* Lighter than headline */
+   line-height: 1.4;
    margin-top: 0;
+   opacity: 0.85;          /* Softer hierarchy */
  }
+
 }
