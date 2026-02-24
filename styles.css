@@ -1646,3 +1646,9 @@ section.numbers .numbers__note {
    font-size: 46px;
  }
 }
+
+@media (min-width: 769px) {
+ .numbers {
+   grid-column: 1 / -1;   /* span full grid width */
+ }
+}
