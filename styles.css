@@ -1327,3 +1327,80 @@ details summary{
    margin: 0 auto;
  }
 }
+
+@media (min-width: 981px) {
+ .gallery__main{
+   background: #fff;
+   border: 1px solid rgba(0,0,0,.06);
+   border-radius: 22px;
+   padding: 34px;
+   box-shadow: 0 10px 30px rgba(0,0,0,.06);
+ }
+}
+
+@media (min-width: 981px) {
+
+ .galleryTop{
+   align-items: center;
+ }
+
+ /* Make the product image feel intentionally sized */
+ .product-image-frame{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 10px 0;
+ }
+
+ .product-image{
+   max-width: 340px !important;
+   width: 100%;
+   height: auto;
+ }
+
+ /* Make the hero image feel larger + premium */
+ .golf-sideVisual__img{
+   border-radius: 18px;
+   box-shadow: 0 14px 38px rgba(0,0,0,.12);
+ }
+
+}
+@media (min-width: 981px) {
+
+ /* Badge row positioning + layout */
+ .galleryBadges{
+   margin-top: 18px;
+   display: flex;
+   gap: 12px;
+   justify-content: flex-start;
+   flex-wrap: wrap;
+ }
+
+ /* Individual badge styling */
+ .badge{
+   padding: 10px 14px;
+   border-radius: 999px;
+   font-weight: 600;
+   font-size: 14px;
+   background: rgba(0,0,0,.04);
+   border: 1px solid rgba(0,0,0,.06);
+ }
+
+}
+
+@media (min-width: 981px) {
+ .buyBox{
+   max-width: 560px;    /* was 700 — this will look more premium */
+   background: #fff;
+   border: 1px solid rgba(0,0,0,.06);
+   border-radius: 22px;
+   padding: 22px;
+   box-shadow: 0 10px 30px rgba(0,0,0,.06);
+ }
+}
+
+@media (min-width: 981px) {
+ .productGrid{
+   gap: 26px; /* reduce from 40 if you kept it */
+ }
+}
