@@ -1170,3 +1170,12 @@ details summary{
 .hero-copy{
  grid-column: 1 / -1;
 }
+.hero {
+ width: 100%;
+}
+
+.hero-image {
+ width: 100%;
+ height: auto;
+ display: block;
+}
