@@ -1423,7 +1423,7 @@ details summary{
    background: #fff;
    border: 1px solid rgba(0,0,0,.06);
    border-radius: 26px;
-   padding: 34px;
+   padding: 28px 34px;
    box-shadow: 0 14px 45px rgba(0,0,0,.08);
  }
 
@@ -1435,7 +1435,7 @@ details summary{
  }
 
  .product-image{
-   max-width: 380px !important;
+   max-width: 420px !important;
  }
 
  .golf-sideVisual__img{
@@ -1450,14 +1450,15 @@ details summary{
  }
 
  .badge{
-   background: rgba(12, 70, 35, .06);
-   border: 1px solid rgba(12, 70, 35, .12);
+   background: rgba(12, 70, 35, .08);
+   border: 1px solid rgba(12, 70, 35, .18);
    font-weight: 700;
+   color: #0c4623
  }
 
  /* --- Layout spacing --- */
  .productGrid{
-   gap: 18px;
+   gap: 12px;
  }
 
  .buyBox{
@@ -1468,20 +1469,21 @@ details summary{
  /* --- Headline styling --- */
  .heroCopy{
    max-width: 1100px;
-   margin: 0 auto 14px auto;
+   margin: 0 auto 24px auto;
    text-align: center;
  }
 
  .heroCopy h1{
    margin: 0 0 8px 0;
-   font-size: 46px;
-   letter-spacing: -0.02em;
+   font-size: 52px;
+   font-weight: 800;
+   letter-spacing: -0.03em;
  }
 
  .heroCopy p{
    margin: 0;
-   font-size: 18px;
-   opacity: .75;
+   font-size: 19px;
+   opacity: .65;
  }
 
 }
