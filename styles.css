@@ -1192,3 +1192,38 @@ details summary{
    object-fit: cover;
  }
 }
+
+/* --- Responsive hero placement: mobile full-width, desktop side-by-side --- */
+
+/* Side image hidden on mobile */
+.golf-sideVisual {
+ display: none;
+}
+
+.golf-sideVisual__img {
+ width: 100%;
+ height: auto;
+ display: block;
+ border-radius: 16px; /* optional */
+}
+
+/* Desktop breakpoint */
+@media (min-width: 1024px) {
+ /* Hide the big full-width hero on desktop */
+ .hero--mobile {
+   display: none;
+ }
+
+ /* Two-column layout in the gallery top area */
+ .galleryTop {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 22px;
+   align-items: center;
+ }
+
+ /* Show the side image on desktop */
+ .golf-sideVisual {
+   display: block;
+ }
+}
