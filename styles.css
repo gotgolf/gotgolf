@@ -1496,3 +1496,9 @@ details summary{
 }
 
 }
+
+/* Force pills row to sit higher inside the hero card */
+.galleryBadges{
+ margin-top: 0px !important;
+ transform: translateY(-12px);
+}
