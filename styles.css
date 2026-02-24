@@ -1280,3 +1280,50 @@ details summary{
    max-width: 420px;  /* optional: consistent width */
  }
 }
+
+/* =========================================
+  DESKTOP LAYOUT: Hero beside product,
+  Buy box below
+========================================= */
+
+@media (min-width: 981px) {
+
+ /* Hide the big hero at top */
+ .hero--mobile {
+   display: none !important;
+ }
+
+ /* Make productGrid stack vertically */
+ .productGrid {
+   display: grid;
+   grid-template-columns: 1fr; /* single column */
+   gap: 40px;
+ }
+
+ /* Make product image + hero image sit side-by-side */
+ .galleryTop {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 30px;
+   align-items: center;
+ }
+
+ /* Show side hero image */
+ .golf-sideVisual {
+   display: block;
+ }
+
+ .golf-sideVisual__img {
+   width: 100%;
+   height: auto;
+   display: block;
+   border-radius: 16px;
+ }
+
+ /* Make buy box full width underneath */
+ .buyBox {
+   width: 100%;
+   max-width: 700px;
+   margin: 0 auto;
+ }
+}
