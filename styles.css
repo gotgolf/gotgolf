@@ -1227,3 +1227,56 @@ details summary{
    display: block;
  }
 }
+
+/* =========================================
+  FINAL OVERRIDES: Desktop side-by-side image
+  Mobile keeps full-width hero
+  ========================================= */
+
+/* 1) Let galleryTop control layout (stop .gallery__main flex from breaking it) */
+.gallery__main{
+ display: block !important;
+}
+
+/* 2) Default: hide the side image on mobile */
+.golf-sideVisual{
+ display: none;
+}
+
+/* 3) Desktop: hide the big hero + show the side image next to product */
+@media (min-width: 981px) {
+ /* Hide the top hero on desktop */
+ .hero--mobile{
+   display: none !important;
+ }
+
+ /* Two-column inside the gallery */
+ .galleryTop{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 22px;
+   align-items: center;
+ }
+
+ .golf-sideVisual{
+   display: block;
+ }
+
+ .golf-sideVisual__img{
+   width: 100%;
+   height: auto;
+   display: block;
+   border-radius: 16px;
+ }
+
+ /* Keep buy box from drifting / getting weird widths */
+ .productGrid{
+   grid-template-columns: 1.15fr .85fr; /* keeps your original intent */
+ }
+
+ .buyBox{
+   justify-self: end; /* pins it to the right edge of its column */
+   width: 100%;
+   max-width: 420px;  /* optional: consistent width */
+ }
+}
