@@ -1502,3 +1502,22 @@ details summary{
  margin-top: 0px !important;
  transform: translateY(-12px);
 }
+
+/* Keep normal layout on desktop */
+.mobile-break {
+ display: inline;
+}
+
+/* Mobile only hero formatting */
+@media (max-width: 768px) {
+ .hero-title {
+   text-align: center;
+   .hero-title { line-height: 1.2; }
+   
+ }
+
+ .mobile-break {
+   display: block;
+ }
+}
+
