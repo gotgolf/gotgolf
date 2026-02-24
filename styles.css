@@ -1512,12 +1512,16 @@ details summary{
 @media (max-width: 768px) {
  .hero-title {
    text-align: center;
-   .hero-title { line-height: 1.2; }
-   
+   line-height: 1.2;
+   margin-bottom: 10px; /* tighter spacing */
  }
 
  .mobile-break {
    display: block;
  }
-}
 
+ .hero-sub {
+   text-align: center;
+   margin-top: 0;
+ }
+}
