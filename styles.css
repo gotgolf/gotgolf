@@ -1431,13 +1431,13 @@ details summary{
 
  /* --- Image layout --- */
  .galleryTop{
-   grid-template-columns: 0.95fr 1.05fr;
-   gap: 36px;
+   grid-template-columns: 1fr 1fr;
+   gap: 22px;
    align-items: center;
  }
 
  .product-image{
-   max-width: 420px !important;
+   max-width: 440px !important;
  }
 
  .golf-sideVisual__img{
