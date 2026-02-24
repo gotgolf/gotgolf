@@ -1369,28 +1369,29 @@ details summary{
 
  /* Badge row positioning + layout */
  .galleryBadges{
-   margin-top: 18px;
+   margin-top: 12px;
    display: flex;
-   gap: 12px;
+   gap: 10px;
    justify-content: flex-start;
    flex-wrap: wrap;
  }
 
  /* Individual badge styling */
  .badge{
-   padding: 10px 14px;
-   border-radius: 999px;
-   font-weight: 600;
-   font-size: 14px;
-   background: rgba(0,0,0,.04);
-   border: 1px solid rgba(0,0,0,.06);
- }
+ padding: 10px 14px;
+ border-radius: 999px;
+ font-weight: 650;
+ font-size: 13px;
+ background: rgba(12, 70, 35, .055);
+ border: 1px solid rgba(12, 70, 35, .14);
+ color: rgba(12, 70, 35, .92);
+}
 
 }
 
 @media (min-width: 981px) {
  .buyBox{
-   max-width: 560px;    /* was 700 — this will look more premium */
+   max-width: 620px;    /* was 700 — this will look more premium */
    background: #fff;
    border: 1px solid rgba(0,0,0,.06);
    border-radius: 22px;
@@ -1417,20 +1418,21 @@ details summary{
  }
 
  /* --- Hero Card --- */
- .gallery__main{
-   max-width: 1100px;
-   margin: 0 auto;
-   background: #fff;
-   border: 1px solid rgba(0,0,0,.06);
-   border-radius: 26px;
-   padding: 28px 34px;
-   box-shadow: 0 14px 45px rgba(0,0,0,.08);
- }
+.gallery__main{
+ max-width: 1120px;
+ margin: 0 auto;
+ background: rgba(255,255,255,.92);
+ border: 1px solid rgba(15, 23, 42, .08); /* crisp premium border */
+ border-radius: 28px;
+ padding: 30px 36px;
+ box-shadow: 0 18px 55px rgba(15, 23, 42, .06); /* softer, premium */
+ backdrop-filter: blur(6px); /* subtle luxury effect (safe if unsupported) */
+}
 
  /* --- Image layout --- */
  .galleryTop{
-   grid-template-columns: 0.9fr 1.1fr;
-   gap: 34px;
+   grid-template-columns: 0.95fr 1.05fr;
+   gap: 36px;
    align-items: center;
  }
 
@@ -1439,8 +1441,8 @@ details summary{
  }
 
  .golf-sideVisual__img{
-   border-radius: 18px;
-   box-shadow: 0 18px 50px rgba(0,0,0,.14);
+   border-radius: 20px;
+   box-shadow: 0 18px 48px rgba(15,23,42,.12);
  }
 
  /* --- Badges --- */
@@ -1462,9 +1464,14 @@ details summary{
  }
 
  .buyBox{
-   max-width: 600px;
-   margin-top: -6px;
- }
+ max-width: 620px;
+ margin: 0 auto;
+ background: rgba(255,255,255,.96);
+ border: 1px solid rgba(15, 23, 42, .08);
+ border-radius: 24px;
+ padding: 22px;
+ box-shadow: 0 16px 45px rgba(15, 23, 42, .06);
+}
 
  /* --- Headline styling --- */
  .heroCopy{
@@ -1474,16 +1481,18 @@ details summary{
  }
 
  .heroCopy h1{
-   margin: 0 0 8px 0;
-   font-size: 52px;
-   font-weight: 800;
-   letter-spacing: -0.03em;
- }
+ margin: 0 0 10px 0;
+ font-size: 54px;
+ font-weight: 850;
+ letter-spacing: -0.035em;
+ line-height: 1.05;
+}
 
- .heroCopy p{
-   margin: 0;
-   font-size: 19px;
-   opacity: .65;
- }
+.heroCopy p{
+ margin: 0;
+ font-size: 18px;
+ opacity: .68;
+ line-height: 1.35;
+}
 
 }
