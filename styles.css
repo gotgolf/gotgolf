@@ -1652,3 +1652,116 @@ section.numbers .numbers__note {
    grid-column: 1 / -1;   /* span full grid width */
  }
 }
+
+/* ===== Numbers section (TrackMan) ===== */
+section.numbers {
+ margin: 18px 0 8px;
+}
+
+section.numbers .numbers__inner {
+ max-width: 980px;
+ margin: 0 auto;
+ padding: 18px 16px;
+}
+
+section.numbers .numbers__header {
+ text-align: center;
+ margin-bottom: 14px;
+}
+
+section.numbers .numbers__badge {
+ display: inline-block;
+ padding: 6px 10px;
+ border-radius: 999px;
+ font-weight: 800;
+ font-size: 12px;
+ letter-spacing: 0.08em;
+ text-transform: uppercase;
+ background: rgba(0, 0, 0, 0.06);
+}
+
+section.numbers .numbers__title {
+ margin: 10px 0 6px;
+ font-size: 30px;
+ font-weight: 900;
+ letter-spacing: -0.02em;
+ line-height: 1.12;
+}
+
+section.numbers .numbers__lead {
+ margin: 0 auto;
+ max-width: 62ch;
+ font-size: 16px;
+ line-height: 1.45;
+ opacity: 0.9;
+}
+
+section.numbers .numbers__grid {
+ display: grid;
+ grid-template-columns: 1fr;
+ gap: 12px;
+ margin-top: 16px;
+}
+
+section.numbers .numbers__card {
+ border-radius: 18px;
+ padding: 18px 16px;
+ text-align: center;
+ background: rgba(255, 255, 255, 0.55);
+ border: 1px solid rgba(0, 0, 0, 0.10);
+ box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+}
+
+section.numbers .numbers__value {
+ font-size: 52px;
+ font-weight: 950;
+ letter-spacing: -0.04em;
+ line-height: 1;
+}
+
+section.numbers .numbers__unit {
+ font-size: 0.55em;
+ margin-left: 2px;
+ opacity: 0.9;
+}
+
+section.numbers .numbers__label {
+ margin-top: 10px;
+ font-size: 14px;
+ font-weight: 800;
+ opacity: 0.85;
+}
+
+section.numbers .numbers__note {
+ margin: 12px auto 0;
+ max-width: 70ch;
+ text-align: center;
+ font-size: 12px;
+ line-height: 1.4;
+ opacity: 0.75;
+}
+
+@media (min-width: 769px) {
+ /* keep it centered + full width even inside productGrid */
+ section.numbers {
+   grid-column: 1 / -1;
+ }
+
+ section.numbers .numbers__inner {
+   padding: 22px 24px;
+ }
+
+ section.numbers .numbers__grid {
+   grid-template-columns: 1fr 1fr;
+   gap: 14px;
+ }
+}
+
+@media (max-width: 768px) {
+ section.numbers .numbers__title {
+   font-size: 26px;
+ }
+ section.numbers .numbers__value {
+   font-size: 46px;
+ }
+}
