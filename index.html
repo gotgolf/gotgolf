@@ -1,5 +1,44 @@
 <!doctype html>
 <html lang="en">
+
+<style>
+ /* FORCE luxury 2-column grid for videos (desktop) */
+ #videos .videoGrid{
+   display: grid !important;
+   grid-template-columns: repeat(2, minmax(0, 420px)) !important;
+   justify-content: center !important;
+   gap: 36px !important;
+   margin-top: 20px !important;
+ }
+
+ #videos .videoCard{
+   width: 420px !important;
+   margin: 0 auto !important;
+   background: #fff !important;
+   border: 1px solid rgba(28,31,29,.08) !important;
+   border-radius: 24px !important;
+   overflow: hidden !important;
+   box-shadow: 0 14px 34px rgba(0,0,0,.06) !important;
+ }
+
+ #videos .bunnyEmbed{
+   width: 100% !important;
+   aspect-ratio: 16 / 9 !important;
+   border: 0 !important;
+   display: block !important;
+ }
+
+ /* Mobile: stack */
+ @media (max-width: 980px){
+   #videos .videoGrid{
+     grid-template-columns: 1fr !important;
+     gap: 18px !important;
+   }
+   #videos .videoCard{
+     width: 100% !important;
+   }
+ }
+</style>
 <head>
  <meta charset="utf-8" />
  <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,7 +47,7 @@
  <meta property="og:title" content="Got Golf — Anti-Slice Rub" />
  <meta property="og:description" content="Hit straighter, longer shots with Anti-Slice Rub." />
  <meta property="og:type" content="website" />
- <meta property="og:image" content="assets/product-1.jpg" />
+ <meta property="og:image" content="assets/main-trans.png" />
  <link rel="icon" href="assets/logo.png" />
  <link rel="stylesheet" href="styles.css" />
 </head>
@@ -38,11 +77,11 @@
        <a href="#faq">FAQ</a>
      </nav>
 
-     <div class="header__actions">
-       <button class="btn btn--ghost" id="openMiniCart" type="button" aria-label="Open cart">
-         Cart <span class="pillCount" id="cartCount">0</span>
-       </button>
-     </div>
+    <div class="header__actions">
+ <a href="https://buy.stripe.com/cNi28rc71cTVaZU02h6g801" class="btn btn--ghost top-buy-btn" target="_blank">
+   Buy Now
+ </a>
+</div>
 
      <button class="burger" id="burger" type="button" aria-label="Open menu">
        <span></span><span></span><span></span>
@@ -50,49 +89,91 @@
    </div>
 
    <div class="mobileNav" id="mobileNav" hidden>
-     <a href="#details">Details</a>
-     <a href="#videos">Demos</a>
-     <a href="#reviews">Reviews</a>
-     <a href="#faq">FAQ</a>
-     <button class="btn btn--primary btn--full" id="buyStickyMobile" type="button">Buy Anti-Slice Rub</button>
+    
+    
    </div>
  </header>
 
  <!-- Main product section -->
+
+ <section class="hero hero--mobile">
+ <img src="assets/hero.jpg" alt="Before and After Got Golf Comparison" class="hero-image">
+</section>
  <main class="container productPage">
    <section class="productGrid">
+<div class="heroCopy">
+ <h1 class="hero-title">
+Hit it straighter.
+<span class="mobile-break">Hit it longer.</span>
+</h1>
+ <p class="hero-sub">
+  Same swing. More distance. More control</p>
+</div>
+
      <!-- Gallery -->
      <div class="gallery">
        <div class="gallery__main">
-         <img id="mainImage" src="assets/product-1.jpg" alt="Anti-Slice Rub product image" />
-       </div>
+ <div class="galleryTop">
+   <div class="product-image-frame">
+     <img class="product-image" src="assets/main-trans.png" alt="Got Golf Anti-Slice Rub">
+   </div>
 
-       <div class="thumbs" role="list" aria-label="Product thumbnails">
-         <button class="thumb isActive" data-src="assets/product-1.jpg" aria-label="View image 1">
-           <img src="assets/product-1.jpg" alt="" />
-         </button>
-         <button class="thumb" data-src="assets/product-2.jpg" aria-label="View image 2">
-           <img src="assets/product-2.jpg" alt="" />
-         </button>
-         <button class="thumb" data-src="assets/product-3.jpg" aria-label="View image 3">
-           <img src="assets/product-3.jpg" alt="" />
-         </button>
-         <button class="thumb" data-src="assets/product-4.jpg" aria-label="View image 4">
-           <img src="assets/product-4.jpg" alt="" />
-         </button>
-       </div>
+   <div class="golf-sideVisual">
+     <img
+       src="assets/hero.jpg"
+       alt="Before and After Got Golf Comparison"
+       class="golf-sideVisual__img"
+       loading="lazy"
+>
+</div>
+   
+ </div>
 
-       <div class="galleryBadges">
-         <div class="badge">Clean application</div>
-         <div class="badge">Built for golfers</div>
-         <div class="badge">Fast shipping</div>
-       </div>
+ <div class="galleryBadges">
+   <div class="badge">Easy Application</div>
+   <div class="badge">Instant Results</div>
+   <div class="badge">Fast shipping</div>
+ </div>
+
+ <section class="numbers" aria-label="Performance statistics">
+ <div class="numbers__inner">
+   <div class="numbers__header">
+     <span class="numbers__badge">TrackMan data</span>
+     <h2 class="numbers__title">The Numbers Don’t Lie</h2>
+     <p class="numbers__lead">
+       Based on <strong>1,000+ recorded swings</strong> with and without Got Golf Anti-Slice Rub.
+     </p>
+   </div>
+
+   <div class="numbers__grid">
+     <div class="numbers__card">
+       <div class="numbers__value">–60<span class="numbers__unit">%</span></div>
+       <div class="numbers__label">Average spin reduction</div>
+     </div>
+
+     <div class="numbers__card">
+       <div class="numbers__value">+20<span class="numbers__unit">%</span></div>
+       <div class="numbers__label">Average distance gain</div>
+     </div>
+   </div>
+
+   <p class="numbers__note">
+     Measured on TrackMan launch monitor data. Results vary by golfer, club, strike, and conditions.
+   </p>
+ </div>
+</section>
+</div>
+         
+
+    
+
+       
      </div>
 
      <!-- Buy box (sticky) -->
      <aside class="buyBox" aria-label="Purchase Anti-Slice Rub">
        <div class="kicker">Anti-Slice Rub</div>
-       <h1 class="title">Hit straighter, longer shots.</h1>
+       
 
        <div class="ratingRow">
          <div class="stars" aria-label="4.8 out of 5 stars">
@@ -106,11 +187,11 @@
            <span class="price__now" id="priceNow">$24.99</span>
            <span class="price__compare" id="priceCompare">$29.99</span>
          </div>
-         <span class="save" id="saveBadge">Save 17%</span>
+         <span class="save" id="saveBadge">Save 33%</span>
        </div>
 
        <p class="subcopy">
-         Designed to help reduce slice and promote a more consistent, playable ball flight.
+         Anti-Slice Rub dramatically reduces ball spin, which will lead to straighter, longer shots. Just apply to the face of your club and see the instant difference!
        </p>
 
        <div class="buyControls">
@@ -124,9 +205,13 @@
          </label>
 
          <div class="ctaStack">
-           <button class="btn btn--primary btn--full" id="addToCart" type="button">
-             Add to cart
-           </button>
+           <a href="https://buy.stripe.com/cNi28rc71cTVaZU02h6g801"
+class="btn btn--primary btn--full" 
+id="addToCart" 
+target="_blank">
+ Buy Now
+</a>
+         </div>
            <a class="btn btn--ghost btn--full" id="buyNow" href="#" target="_blank" rel="noopener">
              Buy it now
            </a>
@@ -158,13 +243,18 @@
            <summary>Description</summary>
            <div class="accBody">
              <p>
-               Got Golf Anti-Slice Rub is designed to help golfers reduce slice and improve consistency.
-               Use it as part of your pre-round routine and swing with confidence.
+               Anti-Slice Rub dramatically reduces excess spin to help eliminate slices and unlock more distance — instantly.
+In TrackMan-tested sessions across 1,000+ swings, golfers saw significant reductions in spin and measurable distance gains without altering their swing mechanics.
+Simply apply to the club face and swing as usual.
+
              </p>
              <ul>
-               <li>Designed for straighter ball flight</li>
+              <li>Built for golfers of all levels</li>
+              <li>Longer carry</li>
+               <li>Straighter ball flight</li>
+               <li>Improved consistency</li>
                <li>Quick, clean application</li>
-               <li>Made for golfers of all levels</li>
+               
              </ul>
            </div>
          </details>
@@ -173,9 +263,9 @@
            <summary>How to use</summary>
            <div class="accBody">
              <ol>
-               <li>Apply Anti-Slice Rub as directed before your session.</li>
-               <li>Take your normal swings — focus on solid contact.</li>
-               <li>Track your ball flight and consistency over time.</li>
+               <li>Apply a thin layer of Anti-Slice Rub to the face of your driver, hybrid, or fairway wood. Re-apply as needed</li>
+               <li>Take your normal swings — focus on solid contact, and thats it! </li>
+               <li>Track your ball flight, distance, and consistency over time.</li>
              </ol>
              <p class="fine">Tip: Watch the demo videos for examples.</p>
            </div>
@@ -184,17 +274,12 @@
          <details>
            <summary>Shipping</summary>
            <div class="accBody">
-             <p>Orders typically ship in 1–2 business days. Delivery times vary by location.</p>
-             <p class="fine">Update this with your exact shipping policy once finalized.</p>
+             <p>Orders ship in 1–2 business days. Delivery times vary by location.</p>
+             <p class="fine">.</p>
            </div>
          </details>
 
-         <details>
-           <summary>Returns</summary>
-           <div class="accBody">
-             <p>Add your return policy here (or link to a policy page).</p>
-           </div>
-         </details>
+         
        </div>
      </aside>
    </section>
@@ -204,33 +289,126 @@
      <div class="sectionHead">
        <div>
          <h2>Watch it work</h2>
-         <p class="subhead">Real demos using your clips.</p>
+         
        </div>
        <button class="btn btn--ghost" id="muteAll" type="button">Mute all</button>
      </div>
+<div class="videoGrid">
+  
+<figure class="videoCard">
+    <iframe class="bunnyEmbed"
 
-     <div class="videoGrid">
-       <figure class="videoCard">
-         <video src="assets/videos/demo-1.mp4" controls playsinline preload="metadata"></video>
-         <figcaption>Demo 1</figcaption>
-       </figure>
-       <figure class="videoCard">
-         <video src="assets/videos/demo-2.mp4" controls playsinline preload="metadata"></video>
-         <figcaption>Demo 2</figcaption>
-       </figure>
-       <figure class="videoCard">
-         <video src="assets/videos/demo-3.mp4" controls playsinline preload="metadata"></video>
-         <figcaption>Demo 3</figcaption>
-       </figure>
-       <figure class="videoCard">
-         <video src="assets/videos/demo-4.mp4" controls playsinline preload="metadata"></video>
-         <figcaption>Demo 4</figcaption>
-       </figure>
-       <figure class="videoCard">
-         <video src="assets/videos/demo-5.mp4" controls playsinline preload="metadata"></video>
-         <figcaption>Demo 5</figcaption>
-       </figure>
-     </div>
+      src="https://player.mediadelivery.net/embed/603760/08a5f5c6-5ec1-4a1e-a0f3-719de9a48202"
+
+      loading="lazy"
+
+      allow="fullscreen; picture-in-picture"
+
+      allowfullscreen>
+
+    </iframe>
+
+    <figcaption>Demo 1</figcaption>
+
+  </figure>
+
+
+
+  <figure class="videoCard">
+
+    <iframe class="bunnyEmbed"
+
+      src="https://player.mediadelivery.net/embed/603760/bb3baa79-b626-4e56-acf4-eca13fffb69c"
+      loading="lazy"
+
+      allow="fullscreen; picture-in-picture"
+
+      allowfullscreen>
+
+    </iframe>
+
+    <figcaption>Demo 2</figcaption>
+
+  </figure>
+
+
+
+  <figure class="videoCard">
+
+    <iframe class="bunnyEmbed"
+
+      src="https://player.mediadelivery.net/embed/603760/5482cfdf-ca14-4b49-b689-7aeefdba0e28"
+      loading="lazy"
+
+      allow="fullscreen; picture-in-picture"
+
+      allowfullscreen>
+
+    </iframe>
+
+    <figcaption>Demo 3</figcaption>
+
+  </figure>
+
+
+
+  <figure class="videoCard">
+
+    <iframe class="bunnyEmbed"
+
+      src="https://player.mediadelivery.net/embed/603760/e073ac00-5683-413a-b188-44063c4f40a3"
+
+      loading="lazy"
+
+      allow="fullscreen; picture-in-picture"
+
+      allowfullscreen>
+
+    </iframe>
+
+    <figcaption>Demo 4</figcaption>
+
+  </figure>
+
+
+
+  <figure class="videoCard">
+
+    <iframe class="bunnyEmbed"
+
+      src="https://player.mediadelivery.net/embed/603760/685cde01-007a-458a-87ec-0152c18cc653" 
+      loading="lazy"
+
+      allow="fullscreen; picture-in-picture"
+
+      allowfullscreen>
+
+    </iframe>
+
+    <figcaption>Demo 5</figcaption>
+
+  </figure>
+
+  <figure class="videoCard">
+
+    <iframe class="bunnyEmbed"
+
+      src="https://player.mediadelivery.net/embed/603760/f5e1a37b-f1e9-4247-9c47-943a0082d481" 
+      loading="lazy"
+
+      allow="fullscreen; picture-in-picture"
+
+      allowfullscreen>
+
+    </iframe>
+
+    <figcaption>Demo 6</figcaption>
+
+  </figure>
+
+</div>
+
+
    </section>
 
    <!-- Reviews -->
@@ -238,7 +416,7 @@
      <div class="sectionHead">
        <div>
          <h2>Reviews</h2>
-         <p class="subhead">Social proof section (replace with real testimonials when ready).</p>
+         
        </div>
      </div>
 
@@ -311,11 +489,11 @@
        </details>
        <details>
          <summary>Do you ship nationwide?</summary>
-         <p>Yes — add your exact shipping coverage + timelines here.</p>
+         <p>Yes — Yes! All products will ship within 1-2 business days.</p>
        </details>
        <details>
          <summary>What’s your return policy?</summary>
-         <p>Add your return policy details here.</p>
+         <p>Although we're sure you'll love your gained distance and control, we accept returns within 30 days of purchase.</p>
        </details>
      </div>
    </section>
@@ -325,7 +503,7 @@
  <div class="stickyBar" id="stickyBar">
    <div class="stickyBar__inner container">
      <div class="stickyMini">
-       <img src="assets/product-1.jpg" alt="" />
+       <img src="assets/logo.png" alt="" />
        <div>
          <div class="stickyName">Anti-Slice Rub</div>
          <div class="stickyPrice">$24.99</div>
@@ -349,12 +527,12 @@
 
      <div class="drawer__body">
        <div class="cartLine">
-         <img src="assets/product-1.jpg" alt="" />
+         <img src="assets/main-trans.png" alt="" />
          <div class="cartLine__info">
            <div class="cartLine__name">Anti-Slice Rub</div>
            <div class="fine">Quantity: <span id="cartQty">1</span></div>
          </div>
-         <div class="cartLine__price" id="cartTotal">$24.99</div>
+         <div class="cartLine__price" id="cartTotal">$19.99</div>
        </div>
 
        <a class="btn btn--primary btn--full" id="checkoutLink" href="#" target="_blank" rel="noopener">
