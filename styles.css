@@ -1765,3 +1765,37 @@ section.numbers .numbers__note {
    font-size: 46px;
  }
 }
+.header__actions {
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding: 10px 0;
+}
+
+.top-buy-btn {
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ text-decoration: none;
+ padding: 14px 30px;
+ min-width: 170px;
+ border-radius: 999px;
+ font-weight: 700;
+ font-size: 15px;
+ line-height: 1;
+ background: #f3efe4;
+ color: #1f1f1f;
+ box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+ transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+.top-buy-btn:hover {
+ transform: translateY(-1px);
+ box-shadow: 0 10px 24px rgba(0,0,0,0.10);
+}
+
+.top-buy-btn:active {
+ transform: translateY(0);
+ box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
