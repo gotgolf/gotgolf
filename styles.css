@@ -1,22 +1,15 @@
-
 :root{
- /* Brand greens (still your brand, just premium) */
- --green: #0C6B37;
- --green2: #09552C; /* used for hover now */
+ /* Pantone 356 C vibe (approx for web) */
+ --green: #007A33;
+ --green2: #0AA84B;
 
- /* Premium foundations */
- --bg: #F5EFE4;                 /* cream page background */
- --panel: #FFFFFF;              /* main card/surface */
- --panel2: #FAF6EE;             /* alt section background */
-
- --text: #1C1F1D;               /* premium charcoal */
- --muted: rgba(28,31,29,.68);   /* softened secondary text */
- --line: rgba(28,31,29,.08);    /* subtle borders */
- --shadow: 0 10px 30px rgba(0,0,0,.06); /* premium shadow */
-
- --clay: #A5533A;
- --claySoft: rgba(165,83,58,.10);
-
+ --bg: #0b0d0f;
+ --panel: #111418;
+ --panel2: rgba(255,255,255,.03);
+ --text: #e9eef3;
+ --muted: rgba(233,238,243,.72);
+ --line: rgba(255,255,255,.10);
+ --shadow: 0 18px 60px rgba(0,0,0,.50);
  --r: 18px;
  --r2: 24px;
  --max: 1180px;
@@ -29,8 +22,8 @@ body{
  color:var(--text);
  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
  background:
-   radial-gradient(900px 540px at 15% -10%, rgba(12,107,55,.10), transparent 60%),
-   radial-gradient(700px 520px at 90% 0%, rgba(165,83,58,.08), transparent 55%),
+   radial-gradient(900px 540px at 15% -10%, rgba(0,122,51,.28), transparent 60%),
+   radial-gradient(700px 520px at 90% 0%, rgba(10,168,75,.18), transparent 55%),
    var(--bg);
 }
 
@@ -38,36 +31,32 @@ a{ color:inherit; text-decoration:none; }
 .container{ width:min(var(--max), calc(100% - 40px)); margin:0 auto; }
 
 .topbar{
- border-bottom: 1px solid rgba(28,31,29,.08);
- background: rgba(250,246,238,.92); /* soft warm white */
- padding: 10px 14px;
+ border-bottom:1px solid rgba(0,122,51,.35);
+ background: rgba(0,122,51,.16);
+ padding:10px 14px;
  display:flex;
  gap:10px;
  justify-content:center;
  flex-wrap:wrap;
- font-size: 13px;
- color: rgba(28,31,29,.72);
- letter-spacing: .2px;
+ font-size:13px;
+ color: rgba(233,238,243,.88);
 }
-.dot{ opacity:.45; }
+.dot{ opacity:.7; }
 
 .header{
  position: sticky;
  top:0;
  z-index:50;
-
- /* Premium glass on cream */
- background: rgba(250,246,238,.88);
- backdrop-filter: blur(10px);
-
- border-bottom: 1px solid rgba(28,31,29,.10);
- box-shadow: 0 10px 24px rgba(0,0,0,.05);
+ backdrop-filter: blur(12px);
+ background: rgba(11,13,15,.56);
+ border-bottom:1px solid var(--line);
 }
 .header__inner{
  display:flex;
  align-items:center;
  justify-content:space-between;
- padding:22px 0;   /* was 14px */
+ gap:14px;
+ padding:14px 0;
 }
 .brand{
  display:flex;
@@ -76,8 +65,8 @@ a{ color:inherit; text-decoration:none; }
  font-weight:900;
  letter-spacing:.2px;
 }
-.brand__logo{ width:70px; height:70px; object-fit:contain; filter: drop-shadow(0 10px 18px rgba(0,0,0,.35)); }
-.brand__name{ font-size:24px; }
+.brand__logo{ width:34px; height:34px; object-fit:contain; filter: drop-shadow(0 10px 18px rgba(0,0,0,.35)); }
+.brand__name{ font-size:16px; }
 
 .nav{
  display:flex;
@@ -144,11 +133,11 @@ a{ color:inherit; text-decoration:none; }
 .btn:hover{ background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.18); }
 .btn:active{ transform: translateY(1px); }
 .btn--primary{
- background: var(--green);
+ background: linear-gradient(135deg, var(--green), var(--green2));
  border-color: transparent;
- box-shadow: 0 10px 24px rgba(12,107,55,.18);
+ box-shadow: 0 14px 44px rgba(0,122,51,.28);
 }
-.btn--primary:hover{ background: var(--green2); filter:none; }
+.btn--primary:hover{ filter: brightness(1.05); }
 .btn--ghost{ background: rgba(255,255,255,.03); }
 .btn--full{ width:100%; }
 
@@ -210,30 +199,20 @@ a{ color:inherit; text-decoration:none; }
  margin-top: 12px;
 }
 .badge{
- font-size: 14px;
- font-weight: 700;
- color: var(--green);                 /* readable text */
- background: #FFFFFF;                 /* clean on cream */
- border: 2px solid rgba(12,107,55,.30);
- padding: 12px 18px;
+ font-size:12px;
+ color: rgba(233,238,243,.86);
+ border: 1px solid rgba(0,122,51,.35);
+ background: rgba(0,122,51,.16);
+ padding: 7px 10px;
  border-radius: 999px;
- letter-spacing: .2px;
- box-shadow: 0 6px 14px rgba(0,0,0,.06);
 }
-
-/* Optional: subtle hover on desktop */
-.badge:hover{
- background: rgba(12,107,55,.06);
- border-color: rgba(12,107,55,.45);
-}
-
 
 /* Buy box */
 .buyBox{
  position: sticky;
  top: 92px;
  border: 1px solid var(--line);
- background: rgba(255,255,255,.82);
+ background: rgba(17,20,24,.80);
  backdrop-filter: blur(10px);
  border-radius: var(--r2);
  padding: 18px;
@@ -384,55 +363,30 @@ summary{
 h2{ margin:0 0 6px; font-size: 28px; letter-spacing: -.4px; }
 .subhead{ margin:0; color: rgba(233,238,243,.74); }
 
-/* ===== PREMIUM VIDEO SECTION (clean + consistent) ===== */
-
 .videoGrid{
- display: grid;
- gap: 26px;
- margin-top: 18px;
-
- /* 2-column premium grid */
- grid-template-columns: repeat(2, minmax(0, 420px));
- justify-content: center;
+ display:grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 14px;
+ margin-top: 14px;
 }
-
-@media (min-width: 981px){
- /* Demo 1 featured across both columns */
- .videoCard--featured{
-   grid-column: 1 / -1;
-   max-width: 880px;
-   margin: 0 auto;
- }
-}
-
-@media (max-width: 980px){
- .videoGrid{
-   grid-template-columns: 1fr;
- }
-}
-
 .videoCard{
- background: #FFFFFF;
- border: 1px solid rgba(28,31,29,.08);
- border-radius: 22px;
- box-shadow: 0 12px 30px rgba(0,0,0,.05);
- overflow: hidden;
- margin: 0;
+ border: 1px solid rgba(255,255,255,.10);
+ border-radius: var(--r);
+ background: rgba(255,255,255,.03);
+ overflow:hidden;
+ margin:0;
 }
-
-.bunnyEmbed{
- width: 100%;
- aspect-ratio: 16 / 9;
- border: 0;
- display: block;
- border-radius: 0; /* card handles rounding */
+.videoCard video{
+ width:100%;
+ display:block;
+ aspect-ratio: 9 / 16;
+ object-fit: cover;
+ background:#0b0d0f;
 }
-
 .videoCard figcaption{
- padding: 12px 14px 14px;
+ padding: 10px 12px;
  font-size: 13px;
- font-weight: 700;
- color: rgba(28,31,29,.72);
+ color: rgba(233,238,243,.72);
 }
 
 /* Reviews */
@@ -508,32 +462,14 @@ h2{ margin:0 0 6px; font-size: 28px; letter-spacing: -.4px; }
 
 /* Sticky buy bar (mobile) */
 .stickyBar{
-position: fixed;
-left: 0;
-right: 0;
-bottom: 0;
-z-index: 60;
-
-padding: 14px 0;
-
-background: rgba(245,239,228,.95);   /* matches site cream */
-backdrop-filter: blur(10px);
-
-border-top: 1px solid rgba(28,31,29,.08);
-box-shadow: 0 -10px 30px rgba(0,0,0,.06);
-
-display: none;
-}
-
-.stickyName{
-color: rgba(28,31,29,.92);
-font-weight: 700;
-}
-
-.stickyPrice{
-color: var(--green);
-font-weight: 800;
-font-size: 16px;
+ position: fixed;
+ left: 0; right: 0; bottom: 0;
+ z-index: 60;
+ padding: 10px 0;
+ background: rgba(17,20,24,.86);
+ border-top: 1px solid rgba(255,255,255,.10);
+ backdrop-filter: blur(10px);
+ display:none;
 }
 .stickyBar__inner{
  display:flex;
@@ -552,18 +488,9 @@ font-size: 16px;
  object-fit: cover;
  border: 1px solid rgba(255,255,255,.10);
 }
-.stickyName{
- font-weight: 800;
- font-size: 13px;
- color: rgba(28,31,29,.92);
-}
+.stickyName{ font-weight: 900; font-size: 13px; }
+.stickyPrice{ color: rgba(233,238,243,.72); font-size: 12px; }
 
-.stickyPrice{
- font-size: 16px;
- font-weight: 900;
- letter-spacing: -0.2px;
- color: var(--green);
-}
 /* Drawer */
 .drawer{
  position: fixed;
@@ -657,1163 +584,4 @@ code{
  .nav{ display:none; }
  .burger{ display:inline-block; }
  .stickyBar{ display:block; }
-}
-.product-image-frame{
- width: 100%;
- max-width: 680px;   /* makes it slightly larger */
- margin: 0 auto;
-
- 
- border: none;
- box-shadow: none;
- padding: 0;
-
- display: flex;
- align-items: center;
- justify-content: center;
-}
-
-.product-image {
- width: 100%;
- height: 100%;
- object-fit: contain;   /* THIS is the key */
- object-position: center;
- display: block;
- border-radius: 0;
-}
-
-/* Premium surface overrides */
-.gallery,
-.buyBox,
-.videoCard,
-.reviewScore,
-.reviewBars,
-.reviewCard,
-details,
-.trustItem,
-.cartLine{
- background: rgba(255,255,255,.82);
- border: 1px solid var(--line);
- box-shadow: var(--shadow);
-}
-
-/* Make alt sections actually "alt" in the light theme */
-.section--alt{
- background: var(--panel2);
-}
-
-/* Text hierarchy for light theme */
-.subhead,
-.fine,
-.subcopy,
-.ratingLink,
-.trustText,
-.reviewCard p,
-.faq p,
-.barRow{
- color: var(--muted);
-}
-
-.stars,
-.starsBig{ color: var(--green); }
-
-/* ===== DESCRIPTION TEXT FIX ===== */
-
-/* Main description paragraph */
-.buyBox p,
-details p{
- color: var(--text);
- opacity: 0.92;
-}
-
-/* Bullet list inside description */
-.buyBox li{
- color: var(--text);
- opacity: 0.92;
-}
-
-/* Accordion headers (Description / How to use / etc) */
-details summary{
- color: var(--text);
- font-weight: 600;
-}
-
-/* ===== PREMIUM LOGO FIX ===== */
-
-.brand{
- font-weight: 800;
- letter-spacing: .1px;
- color: rgba(28,31,29,.92);
-}
-
-.brand__logo{
- filter: none;     /* removes the dark glow */
- border-radius: 10px;
-}
-
-/* ===== PREMIUM NAV STYLE ===== */
-
-.nav{
- color: rgba(28,31,29,.75);
- font-size: 14px;
- gap: 18px;
-}
-
-.nav a{
- position: relative;
- padding: 8px 6px;
-}
-
-.nav a:hover{
- color: rgba(28,31,29,.95);
-}
-
-/* subtle premium underline */
-.nav a::after{
- content:"";
- position:absolute;
- left:6px;
- right:6px;
- bottom:4px;
- height:2px;
- background: rgba(12,107,55,.30);
- border-radius:99px;
- opacity:0;
- transition: all .18s ease;
-}
-
-.nav a:hover::after{
- opacity:1;
-}
-
-/* ===== PREMIUM HEADER CART BUTTON ===== */
-
-.header .btn--ghost{
- background: rgba(255,255,255,.70);
- border: 1px solid rgba(28,31,29,.10);
- color: rgba(28,31,29,.88);
-}
-
-.header .btn--ghost:hover{
- background: rgba(255,255,255,.92);
- border-color: rgba(28,31,29,.15);
-}
-
-/* Cart count number bubble */
-.header .pillCount{
- background: rgba(12,107,55,.12);
- border: 1px solid rgba(12,107,55,.20);
- color: rgba(12,107,55,.90);
-}
-
-.mobileNav{
- background: rgba(250,246,238,.96);
- border-top: 1px solid rgba(28,31,29,.10);
-}
-.mobileNav a:hover{ background: rgba(28,31,29,.04); }
-
-.nav{
- gap: 28px;   /* was around 18px */
-}
-
-.brand{
- font-size: 20px;
- letter-spacing: .2px;
-}
-
-.header .btn{
- padding: 10px 16px;
- border-radius: 999px;
-}
-
-/* ===== CLEAN PRODUCT IMAGE FRAME ===== */
-
-
-
-.gallery__main{
- background: #FFFFFF;       /* clean white frame */
- padding: 40px;             /* space around image */
- border-radius: 20px;
- border: 1px solid rgba(28,31,29,.08);
- box-shadow: 0 12px 30px rgba(0,0,0,.05);
- display: flex;
- align-items: center;
- justify-content: center;
-}
-
-.gallery__main img{
- max-width: 100%;
- height: auto;
- display: block;
-}
-
-/* ===== FIX DARK GALLERY BACKGROUND ===== */
-
-
-}
-
-.gallery__main{
- background: #FFFFFF !important;
- padding: 40px;
- border-radius: 20px;
- border: 1px solid rgba(28,31,29,.08);
- box-shadow: 0 12px 30px rgba(0,0,0,.05);
- display: flex;
- align-items: center;
- justify-content: center;
-}
-
-.gallery__thumbs{
- background: transparent !important;
-}
-
-.gallery__thumb{
- background: #FFFFFF;
- border: 1px solid rgba(28,31,29,.08);
- border-radius: 12px;
-}
-
-/* ===== REMOVE BLACK FRAME ===== */
-
-
-}
-
-/* ===== ENLARGE MAIN PRODUCT IMAGE ===== */
-
-.gallery__main img{
- width: 100%;
- max-width: 520px;   /* increase this if you want even larger */
- height: auto;
- display: block;
- margin: 0 auto;
-}
-
-
-}
-
-/* ===== FORCE REMOVE ALL DARK GALLERY BACKGROUNDS ===== */
-
-.gallery,
-.gallery__track,
-.gallery__viewport,
-.gallery__main{
-
- box-shadow: none !important;
- border: none !important;
-}
-
-/* Remove any dark pseudo backgrounds */
-.gallery::before,
-.gallery::after,
-.gallery__track::before,
-.gallery__track::after{
- display: none !important;
-}
-
-/* Enlarge image */
-.gallery__main img{
- width: 100%;
- max-width: 400px;
- height: auto;
- display: block;
- margin: 0 auto;
-}
-
-/* Add breathing room below product image */
-
-.product-image-frame{
- margin-bottom: 60px;   /* increase or decrease as you like */
-}
-
-/* ===== FIX CUT OFF PRODUCT ===== */
-
-.product-image-frame{
- overflow: visible !important;
- padding-bottom: 40px;   /* creates breathing room below */
-}
-
-/* ===== ENSURE FULL IMAGE SHOWS ===== */
-
-.product-image{
- width: 100%;
- height: auto;
- max-height: none !important;
- object-fit: contain;
- display: block;
-}
-
-/* ===== REMOVE ANY BACKGROUND BEHIND IMAGE ===== */
-
-.product-image-frame,
-.gallery,
-.gallery__main,
-.gallery__track{
-
- border: none !important;
- box-shadow: none !important;
-}
-/* === FINAL FIX: no frame, no cropping, true transparent product === */
-
-.gallery__main{
-;
- border: none !important;
- box-shadow: none !important;
- overflow: visible !important;   /* stop clipping */
-}
-
-.product-image-frame{
-
- border: none !important;
- box-shadow: none !important;
-
- aspect-ratio: auto !important;  /* stop forcing a square */
- overflow: visible !important;   /* stop clipping */
-
- padding: 0 !important;
- margin: 0 auto 28px !important; /* adds gap below product */
- max-width: 400px;               /* adjust bigger/smaller */
-}
-
-.product-image{
- width: 100% !important;
- height: auto !important;        /* critical: prevents cut-off */
- max-height: none !important;
-
- object-fit: contain !important;
- object-position: center !important;
-
- border-radius: 0 !important;    /* “Nike” clean */
- aspect-ratio: auto !important;  /* overrides any gallery img rules */
- display: block !important;
-}
-/* === FINAL OVERRIDE: clean Nike-style product image (no checker, no crop) === */
-
-.gallery{
- 
- border: none !important;
- box-shadow: none !important;
- padding: 0 !important;
-}
-
-.gallery__main{
-
- border: none !important;
- box-shadow: none !important;
- overflow: visible !important;  /* IMPORTANT: stop clipping */
- border-radius: 0 !important;
- padding: 0 !important;
- display: flex !important;
- justify-content: center !important;
- align-items: center !important;
-}
-
-/* IMPORTANT: do NOT force 4:3 or cover */
-.gallery__main img{
- width: 100% !important;
- max-width: 520px !important;
- height: auto !important;
- aspect-ratio: auto !important;
- object-fit: contain !important;
-
- display: block !important;
-}
-
-/* ===== CLEAN 2 COLUMN LUXURY GRID ===== */
-
-#videos .videoGrid{
- display: grid !important;
- grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)) !important;
- justify-content: center !important;
- gap: 36px !important;
- max-width: 1000px !important;
- margin: 20px auto 0 auto !important;
-}
-
-#videos .videoCard{
- width: 100% !important;
- max-width: 480px !important;
- margin: 0 auto !important;
-}
-
-#videos .bunnyEmbed{
- width: 100% !important;
- aspect-ratio: 16 / 9 !important;
- display: block !important;
- border: 0 !important;
-}
-
-/* Premium mobile-menu Buy button */
-#mobileNav #buyStickyMobile{
- width: 100%;
- border-radius: 999px;
- padding: 14px 18px;
-
- font-weight: 800;
- letter-spacing: .2px;
-
- color: #fff;
- background: linear-gradient(135deg, #1f7a3a, #16632e);
- border: 1px solid rgba(255,255,255,.18);
-
- box-shadow: 0 12px 28px rgba(0,0,0,.18);
- transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
-}
-
-#mobileNav #buyStickyMobile:hover{
- transform: translateY(-2px);
- box-shadow: 0 18px 40px rgba(0,0,0,.22);
- filter: brightness(1.03);
-}
-
-/* ===== Premium pill "Buy now" inside the mobile menu ===== */
-
-#mobileNav{
- /* gives the menu breathing room so it doesn't feel cramped */
- padding-bottom: 18px;
-}
-
-/* Override the full-width bar look */
-#mobileNav #buyStickyMobile{
- width: fit-content !important;         /* makes it short */
- max-width: none !important;
- display: inline-flex !important;
- align-items: center;
- justify-content: center;
-
- padding: 12px 22px !important;         /* pill sizing */
- border-radius: 999px !important;
-
- font-size: 14px !important;
- font-weight: 800 !important;
- letter-spacing: .4px !important;
- text-transform: uppercase !important;  /* premium feel */
- line-height: 1 !important;
-
- /* Premium dark/green (best match for your site) */
- color: #fff !important;
- background: linear-gradient(135deg, #1E6F37, #134B26) !important;
- border: 1px solid rgba(255,255,255,.16) !important;
-
- box-shadow:
-   0 10px 24px rgba(0,0,0,.18),
-   inset 0 1px 0 rgba(255,255,255,.14) !important;
-
- margin-top: 14px !important;
-}
-
-/* Center it within the mobile menu */
-#mobileNav{
- text-align: left; /* keep links normal */
-}
-#mobileNav #buyStickyMobile{
- margin-left: 0 !important;
-}
-
-/* If you want it centered under the links, uncomment these 2 lines:
-#mobileNav{ text-align:center; }
-#mobileNav a{ text-align:left; display:block; }
-*/
-
-#mobileNav #buyStickyMobile:hover{
- transform: translateY(-1px);
- box-shadow:
-   0 16px 34px rgba(0,0,0,.22),
-   inset 0 1px 0 rgba(255,255,255,.14) !important;
-}
-
-/* Center mobile nav Buy Now button */
-#mobileNav {
- text-align: center;
-}
-
-#mobileNav a {
- text-align: left;     /* keeps your menu links aligned properly */
- display: block;
-}
-
-#mobileNav #buyStickyMobile {
- margin: 18px auto 0 auto !important;
-}
-.hero-copy{
- text-align: center;
- max-width: 720px;
- margin: 0 auto 24px;
- padding: 0 16px;
-}
-
-.hero-headline{
- font-size: clamp(32px, 4vw, 56px);
- line-height: 1.05;
- font-weight: 800;
- letter-spacing: -0.02em;
- margin: 0 0 10px;
-}
-
-.hero-subheadline{
- font-size: clamp(16px, 1.6vw, 20px);
- line-height: 1.4;
- opacity: 0.85;
- margin: 0 0 16px;
-}
-
-.btn-primary{
- display: inline-flex;
- align-items: center;
- justify-content: center;
- padding: 12px 22px;
- border-radius: 999px;
- font-weight: 700;
- text-decoration: none;
-}
-
-/* Make the headline row span full width so it doesn't steal the left column */
-.hero-copy{
- grid-column: 1 / -1;
-}
-.hero {
- width: 100%;
-}
-
-.hero-image {
- width: 100%;
- height: auto;
- display: block;
-}
-
-@media (min-width: 1024px) {
- .hero {
-   height: 60vh;
-   overflow: hidden;
- }
-
- .hero-image {
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
- }
-}
-
-/* --- Responsive hero placement: mobile full-width, desktop side-by-side --- */
-
-/* Side image hidden on mobile */
-.golf-sideVisual {
- display: none;
-}
-
-.golf-sideVisual__img {
- width: 100%;
- height: auto;
- display: block;
- border-radius: 16px; /* optional */
-}
-
-/* Desktop breakpoint */
-@media (min-width: 1024px) {
- /* Hide the big full-width hero on desktop */
- .hero--mobile {
-   display: none;
- }
-
- /* Two-column layout in the gallery top area */
- .galleryTop {
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   gap: 22px;
-   align-items: center;
- }
-
- /* Show the side image on desktop */
- .golf-sideVisual {
-   display: block;
- }
-}
-
-/* =========================================
-  FINAL OVERRIDES: Desktop side-by-side image
-  Mobile keeps full-width hero
-  ========================================= */
-
-/* 1) Let galleryTop control layout (stop .gallery__main flex from breaking it) */
-.gallery__main{
- display: block !important;
-}
-
-/* 2) Default: hide the side image on mobile */
-.golf-sideVisual{
- display: none;
-}
-
-/* 3) Desktop: hide the big hero + show the side image next to product */
-@media (min-width: 981px) {
- /* Hide the top hero on desktop */
- .hero--mobile{
-   display: none !important;
- }
-
- /* Two-column inside the gallery */
- .galleryTop{
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   gap: 22px;
-   align-items: center;
- }
-
- .golf-sideVisual{
-   display: block;
- }
-
- .golf-sideVisual__img{
-   width: 100%;
-   height: auto;
-   display: block;
-   border-radius: 16px;
- }
-
- /* Keep buy box from drifting / getting weird widths */
- .productGrid{
-   grid-template-columns: 1.15fr .85fr; /* keeps your original intent */
- }
-
- .buyBox{
-   justify-self: end; /* pins it to the right edge of its column */
-   width: 100%;
-   max-width: 420px;  /* optional: consistent width */
- }
-}
-
-/* =========================================
-  DESKTOP LAYOUT: Hero beside product,
-  Buy box below
-========================================= */
-
-@media (min-width: 981px) {
-
- /* Hide the big hero at top */
- .hero--mobile {
-   display: none !important;
- }
-
- /* Make productGrid stack vertically */
- .productGrid {
-   display: grid;
-   grid-template-columns: 1fr; /* single column */
-   gap: 40px;
- }
-
- /* Make product image + hero image sit side-by-side */
- .galleryTop {
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   gap: 30px;
-   align-items: center;
- }
-
- /* Show side hero image */
- .golf-sideVisual {
-   display: block;
- }
-
- .golf-sideVisual__img {
-   width: 100%;
-   height: auto;
-   display: block;
-   border-radius: 16px;
- }
-
- /* Make buy box full width underneath */
- .buyBox {
-   width: 100%;
-   max-width: 700px;
-   margin: 0 auto;
- }
-}
-
-@media (min-width: 981px) {
- .gallery__main{
-   background: #fff;
-   border: 1px solid rgba(0,0,0,.06);
-   border-radius: 22px;
-   padding: 34px;
-   box-shadow: 0 10px 30px rgba(0,0,0,.06);
- }
-}
-
-@media (min-width: 981px) {
-
- .galleryTop{
-   align-items: center;
- }
-
- /* Make the product image feel intentionally sized */
- .product-image-frame{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   padding: 10px 0;
- }
-
- .product-image{
-   max-width: 340px !important;
-   width: 100%;
-   height: auto;
- }
-
- /* Make the hero image feel larger + premium */
- .golf-sideVisual__img{
-   border-radius: 18px;
-   box-shadow: 0 14px 38px rgba(0,0,0,.12);
- }
-
-}
-@media (min-width: 981px) {
-
- /* Badge row positioning + layout */
- .galleryBadges{
-   margin-top: 12px;
-   display: flex;
-   gap: 10px;
-   justify-content: flex-start;
-   flex-wrap: wrap;
- }
-
- /* Individual badge styling */
- .badge{
- padding: 10px 14px;
- border-radius: 999px;
- font-weight: 650;
- font-size: 13px;
- background: rgba(12, 70, 35, .055);
- border: 1px solid rgba(12, 70, 35, .14);
- color: rgba(12, 70, 35, .92);
-}
-
-}
-
-@media (min-width: 981px) {
- .buyBox{
-   max-width: 620px;    /* was 700 — this will look more premium */
-   background: #fff;
-   border: 1px solid rgba(0,0,0,.06);
-   border-radius: 22px;
-   padding: 22px;
-   box-shadow: 0 10px 30px rgba(0,0,0,.06);
- }
-}
-
-@media (min-width: 981px) {
- .productGrid{
-   gap: 26px; /* reduce from 40 if you kept it */
- }
-}
-
-/* =========================================
-  DESKTOP POLISH – FINAL PROFESSIONAL STYLING
-========================================= */
-
-@media (min-width: 981px) {
-
- /* --- Background polish --- */
- .productPage{
-   background: linear-gradient(to bottom, rgba(0,0,0,.03), rgba(0,0,0,0));
- }
-
- /* --- Hero Card --- */
-.gallery__main{
- max-width: 1120px;
- margin: 0 auto;
- background: rgba(255,255,255,.92);
- border: 1px solid rgba(15, 23, 42, .08); /* crisp premium border */
- border-radius: 28px;
- padding: 28px 36px 18px 36px; /* top right bottom left */
- box-shadow: 0 18px 55px rgba(15, 23, 42, .06); /* softer, premium */
- backdrop-filter: blur(6px); /* subtle luxury effect (safe if unsupported) */
-}
-
- /* --- Image layout --- */
- .galleryTop{
-   grid-template-columns: 1fr 1fr;
-   gap: 22px;
-   align-items: center;
- }
-
- .product-image{
-   max-width: 440px !important;
- }
-
- .golf-sideVisual__img{
-   border-radius: 20px;
-   box-shadow: 0 18px 48px rgba(15,23,42,.12);
- }
-
- /* --- Badges --- */
- .galleryBadges{
-   margin-top: 6px;
-   gap: 10px;
- }
-
- .badge{
-   background: rgba(12, 70, 35, .08);
-   border: 1px solid rgba(12, 70, 35, .18);
-   font-weight: 700;
-   color: #0c4623
- }
-
- /* --- Layout spacing --- */
- .productGrid{
-   gap: 12px;
- }
-
- .buyBox{
- max-width: 620px;
- margin: 0 auto;
- background: rgba(255,255,255,.96);
- border: 1px solid rgba(15, 23, 42, .08);
- border-radius: 24px;
- padding: 22px;
- box-shadow: 0 16px 45px rgba(15, 23, 42, .06);
-}
-
- /* --- Headline styling --- */
- .heroCopy{
-   max-width: 1100px;
-   margin: 0 auto 24px auto;
-   text-align: center;
- }
-
- .heroCopy h1{
- margin: 0 0 10px 0;
- font-size: 54px;
- font-weight: 850;
- letter-spacing: -0.035em;
- line-height: 1.05;
-}
-
-.heroCopy p{
- margin: 0;
- font-size: 18px;
- opacity: .68;
- line-height: 1.35;
-}
-
-}
-
-/* Force pills row to sit higher inside the hero card */
-.galleryBadges{
- margin-top: 0px !important;
- transform: translateY(-12px);
-}
-
-/* Keep normal layout on desktop */
-.mobile-break {
- display: inline;
-}
-
-/* Mobile only hero formatting */
-@media (max-width: 768px) {
-
- .hero-title {
-   text-align: center;
-   font-size: 34px;        /* Strong but not oversized */
-   font-weight: 800;       /* Bold, premium look */
-   line-height: 1.15;      /* Tight but readable */
-   letter-spacing: -0.5px; /* Slight tightening for impact */
-   margin-bottom: 8px;     /* Reduced space to subline */
- }
-
- .mobile-break {
-   display: block;
- }
-
- .hero-sub {
-   text-align: center;
-   font-size: 18px;        /* Clear but secondary */
-   font-weight: 500;       /* Lighter than headline */
-   line-height: 1.4;
-   margin-top: 0;
-   opacity: 0.85;          /* Softer hierarchy */
- }
-
-}
-/* ===== Numbers section (TrackMan) ===== */
-section.numbers {
- margin: 18px 0 8px;
-}
-
-section.numbers .numbers__inner {
- max-width: 980px;
- margin: 0 auto;
- padding: 18px 16px;
-}
-
-section.numbers .numbers__header {
- text-align: center;
- margin-bottom: 14px;
-}
-
-section.numbers .numbers__badge {
- display: inline-block;
- padding: 6px 10px;
- border-radius: 999px;
- font-weight: 800;
- font-size: 12px;
- letter-spacing: 0.08em;
- text-transform: uppercase;
- background: rgba(0, 0, 0, 0.06);
-}
-
-section.numbers .numbers__title {
- margin: 10px 0 6px;
- font-size: 30px;
- font-weight: 900;
- letter-spacing: -0.02em;
- line-height: 1.12;
-}
-
-section.numbers .numbers__lead {
- margin: 0 auto;
- max-width: 62ch;
- font-size: 16px;
- line-height: 1.45;
- opacity: 0.9;
-}
-
-section.numbers .numbers__grid {
- display: grid;
- grid-template-columns: 1fr;
- gap: 12px;
- margin-top: 16px;
-}
-
-section.numbers .numbers__card {
- border-radius: 18px;
- padding: 18px 16px;
- text-align: center;
-
- /* premium card */
- background: rgba(255, 255, 255, 0.55);
- border: 1px solid rgba(0, 0, 0, 0.10);
- box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
-}
-
-section.numbers .numbers__value {
- font-size: 52px;
- font-weight: 950;
- letter-spacing: -0.04em;
- line-height: 1;
-}
-
-section.numbers .numbers__unit {
- font-size: 0.55em;
- margin-left: 2px;
- opacity: 0.9;
-}
-
-section.numbers .numbers__label {
- margin-top: 10px;
- font-size: 14px;
- font-weight: 800;
- opacity: 0.85;
-}
-
-section.numbers .numbers__note {
- margin: 12px auto 0;
- max-width: 70ch;
- text-align: center;
- font-size: 12px;
- line-height: 1.4;
- opacity: 0.75;
-}
-
-/* Desktop: 2-up cards */
-@media (min-width: 769px) {
- section.numbers .numbers__inner {
-   padding: 22px 24px;
- }
-
- section.numbers .numbers__grid {
-   grid-template-columns: 1fr 1fr;
-   gap: 14px;
- }
-}
-
-/* Mobile: tighter + slightly smaller type */
-@media (max-width: 768px) {
- section.numbers .numbers__title {
-   font-size: 26px;
- }
-
- section.numbers .numbers__value {
-   font-size: 46px;
- }
-}
-
-@media (min-width: 769px) {
- .numbers {
-   grid-column: 1 / -1;   /* span full grid width */
- }
-}
-
-/* ===== Numbers section (TrackMan) ===== */
-section.numbers {
- margin: 18px 0 8px;
-}
-
-section.numbers .numbers__inner {
- max-width: 980px;
- margin: 0 auto;
- padding: 18px 16px;
-}
-
-section.numbers .numbers__header {
- text-align: center;
- margin-bottom: 14px;
-}
-
-section.numbers .numbers__badge {
- display: inline-block;
- padding: 6px 10px;
- border-radius: 999px;
- font-weight: 800;
- font-size: 12px;
- letter-spacing: 0.08em;
- text-transform: uppercase;
- background: rgba(0, 0, 0, 0.06);
-}
-
-section.numbers .numbers__title {
- margin: 10px 0 6px;
- font-size: 30px;
- font-weight: 900;
- letter-spacing: -0.02em;
- line-height: 1.12;
-}
-
-section.numbers .numbers__lead {
- margin: 0 auto;
- max-width: 62ch;
- font-size: 16px;
- line-height: 1.45;
- opacity: 0.9;
-}
-
-section.numbers .numbers__grid {
- display: grid;
- grid-template-columns: 1fr;
- gap: 12px;
- margin-top: 16px;
-}
-
-section.numbers .numbers__card {
- border-radius: 18px;
- padding: 18px 16px;
- text-align: center;
- background: rgba(255, 255, 255, 0.55);
- border: 1px solid rgba(0, 0, 0, 0.10);
- box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
-}
-
-section.numbers .numbers__value {
- font-size: 52px;
- font-weight: 950;
- letter-spacing: -0.04em;
- line-height: 1;
-}
-
-section.numbers .numbers__unit {
- font-size: 0.55em;
- margin-left: 2px;
- opacity: 0.9;
-}
-
-section.numbers .numbers__label {
- margin-top: 10px;
- font-size: 14px;
- font-weight: 800;
- opacity: 0.85;
-}
-
-section.numbers .numbers__note {
- margin: 12px auto 0;
- max-width: 70ch;
- text-align: center;
- font-size: 12px;
- line-height: 1.4;
- opacity: 0.75;
-}
-
-@media (min-width: 769px) {
- /* keep it centered + full width even inside productGrid */
- section.numbers {
-   grid-column: 1 / -1;
- }
-
- section.numbers .numbers__inner {
-   padding: 22px 24px;
- }
-
- section.numbers .numbers__grid {
-   grid-template-columns: 1fr 1fr;
-   gap: 14px;
- }
-}
-
-@media (max-width: 768px) {
- section.numbers .numbers__title {
-   font-size: 26px;
- }
- section.numbers .numbers__value {
-   font-size: 46px;
- }
-}
-.header__actions {
- width: 100%;
- display: flex;
- justify-content: center;
- align-items: center;
- padding: 10px 0;
-}
-
-.top-buy-btn {
- display: inline-flex;
- align-items: center;
- justify-content: center;
- text-decoration: none;
- padding: 11px 22px;
- min-width: 120px;
- border-radius: 999px;
- font-weight: 700;
- font-size: 14px;
- line-height: 1;
- background: #f3efe4;
- color: #1f1f1f;
- box-shadow: 0 6px 18px rgba(0,0,0,0.08);
- transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
-}
-
-.top-buy-btn:hover {
- transform: translateY(-1px);
- box-shadow: 0 10px 24px rgba(0,0,0,0.10);
-}
-
-.top-buy-btn:active {
- transform: translateY(0);
- box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-}
-
-.header {
- background: #f7f3ea;
- border-bottom: 1px solid rgba(0,0,0,0.06);
-}
-
-.header__inner {
- min-height: 88px;
-}
-
-.nav a {
- opacity: 0.8;
- font-size: 14px;
-}
-
-.nav a:hover {
- opacity: 1;
 }
