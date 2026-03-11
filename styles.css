@@ -1778,11 +1778,11 @@ section.numbers .numbers__note {
  align-items: center;
  justify-content: center;
  text-decoration: none;
- padding: 14px 30px;
- min-width: 170px;
+ padding: 11px 22px;
+ min-width: 120px;
  border-radius: 999px;
  font-weight: 700;
- font-size: 15px;
+ font-size: 14px;
  line-height: 1;
  background: #f3efe4;
  color: #1f1f1f;
@@ -1798,4 +1798,22 @@ section.numbers .numbers__note {
 .top-buy-btn:active {
  transform: translateY(0);
  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.header {
+ background: #f7f3ea;
+ border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.header__inner {
+ min-height: 88px;
+}
+
+.nav a {
+ opacity: 0.8;
+ font-size: 14px;
+}
+
+.nav a:hover {
+ opacity: 1;
 }
