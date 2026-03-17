@@ -2,7 +2,7 @@ const STRIPE_CHECKOUT_LINK = "https://buy.stripe.com/5kQbJ18Bd9GDgLH8NTbZe00";
 
 const PRODUCT = {
  name: "Anti-Slice Rub",
- price: 24.99,
+ price: 19.99,
  compareAt: 29.99,
  currency: "USD"
 };
