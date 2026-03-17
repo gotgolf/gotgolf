@@ -1,4 +1,4 @@
-const STRIPE_CHECKOUT_LINK = "https://buy.stripe.com/5kQbJ18Bd9GDgLH8NTbZe00";
+const STRIPE_CHECKOUT_LINK = "https://buy.stripe.com/bJeeVdgnh3jlaZU02h6g803";
 
 const PRODUCT = {
  name: "Anti-Slice Rub",
