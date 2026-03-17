@@ -68,9 +68,9 @@ const cartQtyEl = $("#cartQty");
 const cartTotal = $("#cartTotal");
 
 function renderCart(){
- cartCount.textContent = String(cartQty);
- cartQtyEl.textContent = String(Math.max(1, cartQty));
- cartTotal.textContent = money(PRODUCT.price * Math.max(1, cartQty));
+ if (cartCount) cartCount.textContent = String(cartQty);
+ if (cartQtyEl) cartQtyEl.textContent = String(Math.max(1, cartQty));
+ if (cartTotal) cartTotal.textContent = money(PRODUCT.price * Math.max(1, cartQty));
 }
 
 // Drawer controls
@@ -90,9 +90,9 @@ function closeDrawerFn(){
  document.body.style.overflow = "";
 }
 
-openMiniCart.addEventListener("click", openDrawer);
-closeDrawer.addEventListener("click", closeDrawerFn);
-overlay.addEventListener("click", closeDrawerFn);
+if (openMiniCart) openMiniCart.addEventListener("click", openDrawer);
+if (closeDrawer) closeDrawer.addEventListener("click", closeDrawerFn);
+if (overlay) overlay.addEventListener("click", closeDrawerFn);
 document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeDrawerFn(); });
 
 // Add to cart
