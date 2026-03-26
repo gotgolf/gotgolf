@@ -1904,19 +1904,28 @@ a[href*="buy"] {
  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
- .numbersCta .btn {
- background: linear-gradient(135deg, #1f6f3e, #2e8b57);
- color: #ffffff;
+ 
+.numbersCta .btn {
+ background: #f7f4ea;
+ color: #1f6f3e;
+ border: 2px solid #b6ceb9;
  padding: 16px 32px;
  border-radius: 999px;
  font-size: 17px;
  font-weight: 700;
  letter-spacing: 0.3px;
- border: none;
- box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+ box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
  transition: all 0.2s ease;
 }
 
+/* HOVER STATE */
+.numbersCta .btn:hover {
+ background: #1f6f3e;
+ color: #ffffff;
+ border-color: #1f6f3e;
+ transform: translateY(-2px);
+ box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15);
+}
 .numbersCta .btn:hover {
  transform: translateY(-2px);
  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.2);
