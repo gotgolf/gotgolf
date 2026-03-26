@@ -2036,3 +2036,8 @@ a.secondaryCta:focus {
    right: 35px;
  }
 }
+
+.stickyButtonWrap {
+ display: flex;
+ align-items: center;
+}
