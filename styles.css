@@ -1981,3 +1981,25 @@ a[href*="buy"] {
  border-color: #1f6f3e;
  transform: translateY(-2px);
 }
+
+/* FORCE secondary buttons to override headerCta */
+.secondaryCta {
+ display: inline-block !important;
+ background: #f7f4ea !important;
+ color: #1f6f3e !important;
+ border: 2px solid #b6ceb9 !important;
+ padding: 16px 32px;
+ border-radius: 999px;
+ font-size: 17px;
+ font-weight: 700;
+ text-decoration: none;
+ transition: all 0.2s ease;
+}
+
+/* Hover */
+.secondaryCta:hover {
+ background: #1f6f3e !important;
+ color: #ffffff !important;
+ border-color: #1f6f3e !important;
+ transform: translateY(-2px);
+}
