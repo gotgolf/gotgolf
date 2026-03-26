@@ -1862,30 +1862,5 @@ section.numbers .numbers__note {
  min-width: 280px;
 }
 
-.numbersCta,
-.reviewsCta,
-.finalCta {
- margin-top: 32px;
- text-align: center;
-}
 
-.numbersCta .btn,
-.reviewsCta .btn,
-.finalCta .btn {
- display: inline-flex !important;
- align-items: center;
- justify-content: center;
- min-width: 260px;
- height: 56px;
- padding: 0 28px;
- border-radius: 999px;
- background: #ffffff !important;
- color: #1f6f3e !important;
- border: 2px solid #9fc3a8 !important;
- box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06) !important;
- font-size: 17px;
- font-weight: 700;
- text-decoration: none;
- opacity: 1 !important;
- visibility: visible !important;
-}
+ 
