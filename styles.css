@@ -2033,6 +2033,6 @@ a.secondaryCta:focus {
 @media (max-width: 768px) {
  .headerCta {
    position: relative;
-   right: 12px;
+   right: 25px;
  }
 }
