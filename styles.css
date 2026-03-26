@@ -2029,3 +2029,10 @@ a.secondaryCta:focus {
  border-color: #1f6f3e !important;
  transform: translateY(-2px) !important;
 }
+
+@media (max-width: 768px) {
+ .headerCta {
+   position: relative;
+   right: 12px;
+ }
+}
