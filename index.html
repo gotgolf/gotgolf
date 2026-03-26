@@ -39,6 +39,16 @@
    }
  }
 </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18025230803">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18025230803');
+</script>
 <head>
  <meta charset="utf-8" />
  <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -50,12 +60,34 @@
  <meta property="og:image" content="assets/main-trans.png" />
  <link rel="icon" href="assets/logo.png" />
  <link rel="stylesheet" href="styles.css" />
+
+ <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18025230803">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18025230803');
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18025230803">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18025230803');
+</script>
 </head>
 
 <body>
  <!-- Top bar -->
  <div class="topbar" role="status">
-   <span>Free shipping over $40</span>
+   <span>Free shipping on all U.S orders!</span>
    <span class="dot">•</span>
    <span>Secure checkout</span>
    <span class="dot">•</span>
@@ -78,8 +110,15 @@
      </nav>
 
     <div class="header__actions">
- <a href="https://buy.stripe.com/6oU7sLfjd6vxec6aGV6g804" class="btn btn--ghost top-buy-btn" target="_blank">
-   Buy Now
+ <script async
+ src="https://js.stripe.com/v3/buy-button.js">
+</script>
+
+<stripe-buy-button
+ buy-button-id="buy_btn_1TC0UyF5TEH9Eif41FBLNeF0"
+ publishable-key="pk_live_51T9rEEF5TEH9Eif4cW1rb5Tm3XT2iDrFbEvNYu0cR7s50DSc4W4aG9fWjFN4v5fFR2fV7ahf2plJEtwfz4HI5Vg000i89wzH6Q"
+
+</stripe-buy-button></stripe-buy-button>
  </a>
 </div>
 
@@ -160,6 +199,11 @@ Hit it straighter.
    <p class="numbers__note">
      Measured on TrackMan launch monitor data. Results vary by golfer, club, strike, and conditions.
    </p>
+   <div class="numbersCta">
+ <button class="btn btn--primary" type="button" onclick="document.getElementById('stickyBuy').click()">
+   Start Hitting It Straighter
+ </button>
+</div>
  </div>
 </section>
 </div>
@@ -184,7 +228,7 @@ Hit it straighter.
 
        <div class="priceRow">
          <div class="price">
-           <span class="price__now" id="priceNow">$17.99</span>
+           <span class="price__now" id="priceNow">$19.99</span>
            <span class="price__compare" id="priceCompare">$29.99</span>
          </div>
          <span class="save" id="saveBadge">Save 33%</span>
@@ -298,7 +342,7 @@ Simply apply to the club face and swing as usual.
 <figure class="videoCard">
     <iframe class="bunnyEmbed"
 
-      src="https://player.mediadelivery.net/play/603760/58e49f85-b333-4912-8200-3c6ba78ec727"
+      src="https://player.mediadelivery.net/embed/603760/08a5f5c6-5ec1-4a1e-a0f3-719de9a48202"
 
       loading="lazy"
 
@@ -467,6 +511,11 @@ Simply apply to the club face and swing as usual.
          <div class="fine">— Alex</div>
        </article>
      </div>
+     <div class="reviewsCta">
+ <button class="reviewsBtn" type="button" onclick="document.getElementById('stickyBuy').click()">
+   See Why Golfers Love It
+ </button>
+</div>
    </section>
 
    <!-- FAQ -->
@@ -506,10 +555,10 @@ Simply apply to the club face and swing as usual.
        <img src="assets/logo.png" alt="" />
        <div>
          <div class="stickyName">Anti-Slice Rub</div>
-         <div class="stickyPrice">$17.99</div>
+         <div class="stickyPrice">$19.99</div>
        </div>
      </div>
-     <button class="btn btn--primary" id="stickyBuy" type="button">Fix My Slice</button>
+     <button class="btn btn--primary" id="stickyBuy" type="button">Buy</button>
    </div>
  </div>
 
@@ -532,7 +581,7 @@ Simply apply to the club face and swing as usual.
            <div class="cartLine__name">Anti-Slice Rub</div>
            <div class="fine">Quantity: <span id="cartQty">1</span></div>
          </div>
-         <div class="cartLine__price" id="cartTotal">$17.99</div>
+         <div class="cartLine__price" id="cartTotal">$19.99</div>
        </div>
 
        <a class="btn btn--primary btn--full" id="checkoutLink" href="#" target="_blank" rel="noopener">

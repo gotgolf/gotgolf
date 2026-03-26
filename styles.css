@@ -1861,6 +1861,26 @@ section.numbers .numbers__note {
 .reviewsCta .btn {
  min-width: 280px;
 }
+.reviewsCta {
+ margin-top: 28px;
+ text-align: center;
+}
 
+.reviewsBtn {
+ background: transparent;
+ color: #1f6f3e;
+ border: 2px solid #1f6f3e;
+ padding: 14px 26px;
+ border-radius: 999px;
+ font-size: 16px;
+ font-weight: 600;
+ cursor: pointer;
+ transition: all 0.2s ease;
+}
+
+.reviewsBtn:hover {
+ background: #1f6f3e;
+ color: #ffffff;
+}
 
  
