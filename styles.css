@@ -2070,3 +2070,10 @@ a.secondaryCta:focus {
    white-space: nowrap;
  }
 }
+@media (max-width: 768px) {
+ .stickyBar .headerCta {
+   position: relative;
+   right: -12px;
+ }
+}
+
