@@ -1837,3 +1837,27 @@ section.numbers .numbers__note {
    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
  }
 }
+.stickySub {
+ font-size: 12px;
+ line-height: 1.2;
+ color: #5f5f5f;
+ margin-top: 2px;
+}
+
+.numbersCta {
+ margin-top: 20px;
+ text-align: center;
+}
+
+.numbersCta .btn {
+ min-width: 260px;
+}
+
+.reviewsCta {
+ margin-top: 28px;
+ text-align: center;
+}
+
+.reviewsCta .btn {
+ min-width: 280px;
+}
