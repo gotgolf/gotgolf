@@ -2041,3 +2041,31 @@ a.secondaryCta:focus {
  display: flex;
  align-items: center;
 }
+
+@media (max-width: 768px) {
+ .stickyBar_inner {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 12px;
+ }
+
+ .stickyMini {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+ }
+
+ .stickyButtonWrap {
+   margin-left: auto;
+ }
+}
+
+@media (max-width: 768px) {
+ .stickyBar .headerCta {
+   padding: 14px 22px;
+   font-size: 16px;
+   border-radius: 999px;
+   white-space: nowrap;
+ }
+}
