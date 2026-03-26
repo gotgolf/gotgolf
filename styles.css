@@ -2031,11 +2031,9 @@ a.secondaryCta:focus {
 }
 
 @media (max-width: 768px) {
- .headerCta {
-   position: relative;
-   right: 35px;
+ 
  }
-}
+
 
 .stickyButtonWrap {
  display: flex;
@@ -2058,7 +2056,7 @@ a.secondaryCta:focus {
 
  .stickyButtonWrap {
    margin-left: auto;
-   padding-right: 6px;
+   padding-right: 36px;
  }
 }
 
