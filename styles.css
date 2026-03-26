@@ -1823,3 +1823,17 @@ section.numbers .numbers__note {
  height: 12px;
  background: #007A3D; /* Pantone 356c */
 }
+
+@media (max-width: 768px) {
+ #stickyBuy {
+   height: 64px;
+   min-width: 140px;
+   padding: 0 28px;
+   font-size: 20px;
+   font-weight: 700;
+   border-radius: 999px;
+   background: #1f6f3e;
+   color: #ffffff;
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+ }
+}
