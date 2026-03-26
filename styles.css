@@ -2058,13 +2058,13 @@ a.secondaryCta:focus {
 
  .stickyButtonWrap {
    margin-left: auto;
-   padding-right: 10px;
+   padding-right: 16px;
  }
 }
 
 @media (max-width: 768px) {
  .stickyBar .headerCta {
-   padding: 14px 22px;
+   padding: 14px 10px;
    font-size: 16px;
    border-radius: 999px;
    white-space: nowrap;
