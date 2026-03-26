@@ -1883,4 +1883,41 @@ section.numbers .numbers__note {
  color: #ffffff;
 }
 
- 
+.header .btn,
+.header_actions .btn,
+a[href*="buy"] {
+ background: #1f6f3e !important;
+ color: #ffffff !important;
+ padding: 14px 28px;
+ border-radius: 999px;
+ font-weight: 700;
+ font-size: 16px;
+ letter-spacing: 0.3px;
+ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+ transition: all 0.2s ease;
+ border: none;
+}
+
+.header .btn:hover,
+.header_actions .btn:hover {
+ transform: translateY(-1px);
+ box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+ .numbersCta .btn {
+ background: linear-gradient(135deg, #1f6f3e, #2e8b57);
+ color: #ffffff;
+ padding: 16px 32px;
+ border-radius: 999px;
+ font-size: 17px;
+ font-weight: 700;
+ letter-spacing: 0.3px;
+ border: none;
+ box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+ transition: all 0.2s ease;
+}
+
+.numbersCta .btn:hover {
+ transform: translateY(-2px);
+ box-shadow: 0 14px 30px rgba(0, 0, 0, 0.2);
+}
