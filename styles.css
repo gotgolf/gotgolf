@@ -1861,3 +1861,24 @@ section.numbers .numbers__note {
 .reviewsCta .btn {
  min-width: 280px;
 }
+
+.numbersCta .btn,
+.reviewsCta .btn,
+.finalCta .btn {
+ background: #f8f5ec;
+ color: #1f6f3e;
+ border: 2px solid #b7d1bf;
+ box-shadow: none;
+ min-width: 260px;
+ padding: 16px 28px;
+ border-radius: 999px;
+ font-size: 17px;
+ font-weight: 700;
+ letter-spacing: 0.01em;
+}
+
+.numbersCta .btn:hover,
+.reviewsCta .btn:hover,
+.finalCta .btn:hover {
+ transform: translateY(-1px);
+}
