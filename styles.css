@@ -1959,3 +1959,25 @@ a[href*="buy"] {
 .headerCta:active {
  transform: scale(0.98);
 }
+
+/* Secondary CTA (cream style) */
+.secondaryCta {
+ display: inline-block;
+ background: #f7f4ea;
+ color: #1f6f3e;
+ border: 2px solid #b6ceb9;
+ padding: 16px 32px;
+ border-radius: 999px;
+ font-size: 17px;
+ font-weight: 700;
+ text-decoration: none;
+ transition: all 0.2s ease;
+}
+
+/* Hover */
+.secondaryCta:hover {
+ background: #1f6f3e;
+ color: #ffffff;
+ border-color: #1f6f3e;
+ transform: translateY(-2px);
+}
