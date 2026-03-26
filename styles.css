@@ -2064,7 +2064,7 @@ a.secondaryCta:focus {
 
 @media (max-width: 768px) {
  .stickyBar .headerCta {
-   padding: 14px 10px;
+   padding: 24px 10px;
    font-size: 16px;
    border-radius: 999px;
    white-space: nowrap;
