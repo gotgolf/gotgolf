@@ -2147,4 +2147,16 @@ a.secondaryCta:focus {
  }
 }
 
+@media (max-width: 768px) {
+ .ctaBlock {
+   width: 100%;
+   align-items: center;
+ }
+
+ .shippingText {
+   position: relative;
+   left: -8px; /* adjust this value */
+ }
+}
+
 
