@@ -2076,4 +2076,13 @@ a.secondaryCta:focus {
    right: -12px;
  }
 }
+.shippingText {
+ text-align: center;
+ font-size: 14px;
+ color: #666;
+ margin-top: 8px;
+ font-weight: 500;
+}
+
+
 
