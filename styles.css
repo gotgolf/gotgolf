@@ -2352,4 +2352,86 @@ a.secondaryCta:focus {
  }
 }
 
+.ggLifestyle {
+ background: #f6f1e7;
+ padding: 24px 20px 48px;
+}
+
+.ggLifestyleWrap {
+ max-width: 1120px;
+ margin: 0 auto;
+}
+
+.ggLifestyleImageBox {
+ position: relative;
+ border-radius: 24px;
+ overflow: hidden;
+}
+
+.ggLifestyleImageBox img {
+ width: 100%;
+ height: auto;
+ display: block;
+}
+
+.ggLifestyleOverlay {
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ padding: 28px 24px 26px;
+ background: linear-gradient(
+   to top,
+   rgba(0, 0, 0, 0.55),
+   rgba(0, 0, 0, 0.15),
+   transparent
+ );
+ color: #ffffff;
+}
+
+.ggLifestyleOverlay h2 {
+ margin: 0 0 6px;
+ font-size: clamp(26px, 3vw, 38px);
+ line-height: 1.1;
+ letter-spacing: -0.02em;
+}
+
+.ggLifestyleOverlay p {
+ margin: 0 0 14px;
+ font-size: 16px;
+ line-height: 1.5;
+ opacity: 0.9;
+}
+
+.ggLifestyleBtn {
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ padding: 12px 22px;
+ border-radius: 999px;
+ background: #0f5c2e;
+ color: #ffffff;
+ text-decoration: none;
+ font-weight: 700;
+ font-size: 14px;
+}
+
+.ggLifestyleBtn:hover {
+ opacity: 0.95;
+}
+
+@media (max-width: 768px) {
+ .ggLifestyleOverlay {
+   padding: 22px 18px;
+ }
+
+ .ggLifestyleOverlay h2 {
+   font-size: 24px;
+ }
+
+ .ggLifestyleOverlay p {
+   font-size: 14px;
+ }
+}
+
 
