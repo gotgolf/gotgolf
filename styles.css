@@ -2297,8 +2297,8 @@ a.secondaryCta:focus {
 
 /* reveal animation */
 .reveal {
- opacity: 0;
- transform: translateY(24px);
+ opacity: 1;
+ transform: none;
  transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
