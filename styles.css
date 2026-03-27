@@ -2481,4 +2481,11 @@ a.secondaryCta:focus {
    max-width: 100%;
  }
 }
-
+/* Fix gray text issue */
+.description,
+.accordion,
+details,
+summary,
+.description p {
+ color: #111 !important;
+}
