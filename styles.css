@@ -2083,6 +2083,16 @@ a.secondaryCta:focus {
  margin-top: 8px;
  font-weight: 500;
 }
+.buttonWrapper {
+ display: flex;
+ justify-content: center;
+}
 
+.shippingText {
+ text-align: center;
+ font-size: 14px;
+ color: #666;
+ margin-top: 10px;
+}
 
 
