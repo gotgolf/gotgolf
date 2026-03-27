@@ -2155,7 +2155,7 @@ a.secondaryCta:focus {
 
  .shippingText {
    position: relative;
-   left: -12px; /* adjust this value */
+   left: -18px; /* adjust this value */
  }
 }
 
