@@ -2433,5 +2433,52 @@ a.secondaryCta:focus {
    font-size: 14px;
  }
 }
+.galleryTop {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 32px;
+ align-items: center;
+}
 
+.gallery__main {
+ max-width: 1100px;
+ margin: 0 auto;
+}
+
+.product-image-frame {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.product-image {
+ display: block;
+ width: 260px;
+ max-width: 100%;
+ height: auto;
+ margin: 0 auto;
+}
+
+.buyBox {
+ position: static;
+ top: auto;
+ width: 100%;
+ max-width: 480px;
+ margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+ .galleryTop {
+   grid-template-columns: 1fr;
+   gap: 20px;
+ }
+
+ .product-image {
+   width: 220px;
+ }
+
+ .buyBox {
+   max-width: 100%;
+ }
+}
 
