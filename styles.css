@@ -2108,5 +2108,43 @@ a.secondaryCta:focus {
  text-align: center;
  width: 100%;
 }
+.header__actions {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.ctaBlock {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.shippingText {
+ margin-top: 10px;
+ text-align: center;
+ font-size: 14px;
+ color: #666;
+ width: auto;
+ max-width: none;
+}
+
+@media (max-width: 768px) {
+ .header__actions {
+   width: 100%;
+   justify-content: center;
+ }
+
+ .ctaBlock {
+   width: 100%;
+   align-items: center;
+ }
+
+ .shippingText {
+   display: block;
+   width: 100%;
+   text-align: center;
+ }
+}
 
 
