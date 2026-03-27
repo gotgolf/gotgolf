@@ -2095,4 +2095,18 @@ a.secondaryCta:focus {
  margin-top: 10px;
 }
 
+.header__actions {
+ display: flex;
+ flex-direction: column;   /* THIS is the key fix */
+ align-items: center;      /* centers everything */
+}
+
+.shippingText {
+ margin-top: 8px;
+ font-size: 14px;
+ color: #666;
+ text-align: center;
+ width: 100%;
+}
+
 
